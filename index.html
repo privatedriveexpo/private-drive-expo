@@ -3,379 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Private Drive Expo | Professional Private Transport</title>
-
-<meta name="description" content="Private Drive Expo (Pty) Ltd provides professional private transport, airport transfers, family trips, road trips, business travel and designated driver services.">
+<title>Private Drive Expo | Soshanguve</title>
+<meta name="description" content="Private Drive Expo - Professional private transport and vehicle services in Soshanguve.">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#080808;
-    color:#fff;
-    line-height:1.6;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
 }
 
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#080808;
-    border-bottom:1px solid #d4af37;
+header {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #f5c400;
 }
 
-nav{
-    max-width:1200px;
-    margin:auto;
-    padding:10px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+header img {
+  width: 150px;
+  max-width: 80%;
 }
 
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
+nav {
+  margin-top: 15px;
 }
 
-.logo-area img{
-    width:55px;
-    height:55px;
-    object-fit:contain;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
-.logo-text{
-    color:#d4af37;
-    font-weight:bold;
-    font-size:18px;
+nav a:hover {
+  color: #f5c400;
 }
 
-nav ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+              url("vehicle-1.png") center/cover no-repeat;
 }
 
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:bold;
+.hero-content {
+  max-width: 850px;
 }
 
-nav a:hover{
-    color:#d4af37;
+.hero h1 {
+  font-size: 46px;
+  color: #f5c400;
+  margin-bottom: 15px;
 }
 
-.hero{
-    min-height:600px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:60px 20px;
-    background:
-        linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.85)),
-        url("advertisement.png") center/cover no-repeat;
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
 }
 
-.hero-content{
-    max-width:850px;
+.button {
+  display: inline-block;
+  background: #f5c400;
+  color: #000;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px;
 }
 
-.hero img{
-    width:130px;
-    max-width:40%;
-    margin-bottom:20px;
+.button:hover {
+  background: #fff;
 }
 
-.hero h1{
-    font-size:52px;
-    color:#d4af37;
-    margin-bottom:10px;
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.hero h2{
-    font-size:28px;
-    margin-bottom:15px;
+section h2 {
+  text-align: center;
+  color: #f5c400;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-.hero p{
-    font-size:18px;
-    color:#ddd;
-    margin-bottom:25px;
+.about {
+  text-align: center;
+  font-size: 18px;
 }
 
-.btn{
-    display:inline-block;
-    padding:14px 25px;
-    margin:6px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.btn-gold{
-    background:#d4af37;
-    color:#000;
+.service {
+  background: #1d1d1d;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #333;
 }
 
-.btn-dark{
-    border:1px solid #d4af37;
-    color:#fff;
+.service h3 {
+  color: #f5c400;
+  margin-bottom: 10px;
 }
 
-section{
-    max-width:1200px;
-    margin:auto;
-    padding:70px 20px;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
+.gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #333;
 }
 
-.section-title h2{
-    color:#d4af37;
-    font-size:35px;
+.contact {
+  text-align: center;
+  background: #181818;
+  border-radius: 15px;
 }
 
-.section-title p{
-    color:#bbb;
+.contact p {
+  margin: 10px 0;
+  font-size: 18px;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:25px;
+footer {
+  text-align: center;
+  background: #000;
+  padding: 25px 15px;
+  margin-top: 30px;
+  border-top: 2px solid #f5c400;
 }
 
-.card{
-    background:#111;
-    border:1px solid #333;
-    border-radius:12px;
-    padding:25px;
-    text-align:center;
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  z-index: 1000;
 }
 
-.card:hover{
-    border-color:#d4af37;
-}
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 34px;
+  }
 
-.card h3{
-    color:#d4af37;
-    margin-bottom:10px;
-}
+  .hero p {
+    font-size: 17px;
+  }
 
-.card p{
-    color:#ccc;
-}
-
-.icon{
-    font-size:40px;
-    margin-bottom:12px;
-}
-
-.about{
-    background:#0e0e0e;
-}
-
-.about-content{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.about-content p{
-    color:#ccc;
-    margin-bottom:15px;
-}
-
-.highlight{
-    color:#d4af37;
-    font-weight:bold;
-}
-
-.image-section{
-    text-align:center;
-}
-
-.image-section img{
-    width:100%;
-    max-width:850px;
-    border-radius:12px;
-    border:1px solid #444;
-    margin:10px;
-}
-
-.brand-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.brand-grid img{
-    width:100%;
-    border-radius:12px;
-    border:1px solid #444;
-}
-
-.driver-section{
-    background:
-        linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
-        url("advertisement.png") center/cover;
-}
-
-.driver-box{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.driver-box h2{
-    color:#d4af37;
-    font-size:35px;
-}
-
-.verify{
-    background:#101010;
-    border:1px solid #d4af37;
-    border-radius:12px;
-    padding:30px;
-    text-align:center;
-}
-
-.verify p{
-    margin:9px;
-}
-
-.verify strong{
-    color:#d4af37;
-}
-
-.rating{
-    text-align:center;
-}
-
-.stars{
-    color:#d4af37;
-    font-size:40px;
-    letter-spacing:5px;
-}
-
-.contact-box{
-    text-align:center;
-}
-
-.contact-item{
-    margin:13px;
-    font-size:18px;
-}
-
-.contact-item a{
-    color:#d4af37;
-    text-decoration:none;
-}
-
-.social{
-    text-align:center;
-    margin-top:25px;
-}
-
-.social a{
-    display:inline-block;
-    padding:10px 18px;
-    margin:5px;
-    border:1px solid #d4af37;
-    border-radius:5px;
-    color:#d4af37;
-    text-decoration:none;
-}
-
-footer{
-    background:#000;
-    border-top:1px solid #d4af37;
-    text-align:center;
-    padding:35px 20px 90px;
-    color:#aaa;
-}
-
-footer strong{
-    color:#d4af37;
-}
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:25px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#25D366;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    text-decoration:none;
-    z-index:999;
-}
-
-.mobile-bar{
-    display:none;
-}
-
-@media(max-width:800px){
-
-    nav ul{
-        display:none;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero h2{
-        font-size:23px;
-    }
-
-    .mobile-bar{
-        position:fixed;
-        bottom:0;
-        left:0;
-        right:0;
-        z-index:998;
-        display:flex;
-    }
-
-    .mobile-bar a{
-        width:50%;
-        padding:15px;
-        text-align:center;
-        color:#fff;
-        text-decoration:none;
-        font-weight:bold;
-    }
-
-    .call{
-        background:#222;
-    }
-
-    .wa{
-        background:#25D366;
-    }
-
-    .whatsapp{
-        bottom:70px;
-    }
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
 }
 </style>
 </head>
@@ -383,442 +197,108 @@ footer strong{
 <body>
 
 <header>
-<nav>
+  <img src="logo.png" alt="Private Drive Expo Logo">
 
-<div class="logo-area">
-<img src="logo.png" alt="Private Drive Expo Logo">
-<div class="logo-text">PRIVATE DRIVE EXPO</div>
-</div>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#vehicles">Vehicles</a></li>
-<li><a href="#drivers">Drivers</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-
 <section class="hero" id="home">
+  <div class="hero-content">
+    <h1>PRIVATE DRIVE EXPO</h1>
+    <p>Professional Private Transport & Vehicle Services</p>
+    <p>Soshanguve and surrounding areas</p>
 
-<div class="hero-content">
-
-<img src="logo.png" alt="Private Drive Expo">
-
-<h1>PRIVATE DRIVE EXPO</h1>
-
-<h2>Your Ride. Our Priority.</h2>
-
-<p>
-Professional, reliable and comfortable private transportation
-for individuals, families and businesses.
-</p>
-
-<a class="btn btn-gold"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20would%20like%20to%20make%20a%20booking.">
-BOOK ON WHATSAPP
-</a>
-
-<a class="btn btn-dark"
-href="tel:0723850359">
-CALL NOW
-</a>
-
-</div>
-
+    <a class="button" href="#contact">Book a Ride</a>
+    <a class="button" href="#services">Our Services</a>
+  </div>
 </section>
 
+<section id="about">
+  <h2>About Private Drive Expo</h2>
+
+  <div class="about">
+    <p>
+      Private Drive Expo provides reliable, professional and convenient
+      private transport services for individuals, families and businesses.
+      We are committed to safe, comfortable and dependable transportation.
+    </p>
+  </div>
+</section>
 
 <section id="services">
+  <h2>Our Services</h2>
 
-<div class="section-title">
-<h2>Our Services</h2>
-<p>Professional transport for every occasion.</p>
-</div>
+  <div class="services">
 
-<div class="grid">
+    <div class="service">
+      <h3>Private Rides</h3>
+      <p>Comfortable private transport for your everyday travel needs.</p>
+    </div>
 
-<div class="card">
-<div class="icon">✈️</div>
-<h3>Airport Transfers</h3>
-<p>Reliable airport transportation for individuals, families and business travellers.</p>
-</div>
+    <div class="service">
+      <h3>Airport Transfers</h3>
+      <p>Reliable transport to and from airports.</p>
+    </div>
 
-<div class="card">
-<div class="icon">🚗</div>
-<h3>Local Rides</h3>
-<p>Safe and convenient private transportation around town.</p>
-</div>
+    <div class="service">
+      <h3>Business Transport</h3>
+      <p>Professional transportation solutions for business clients.</p>
+    </div>
 
-<div class="card">
-<div class="icon">👨‍👩‍👧‍👦</div>
-<h3>Family Trips</h3>
-<p>Comfortable private transport for families and special occasions.</p>
-</div>
+    <div class="service">
+      <h3>Special Events</h3>
+      <p>Transport services for events, functions and special occasions.</p>
+    </div>
 
-<div class="card">
-<div class="icon">🛣️</div>
-<h3>Road Trips</h3>
-<p>Comfortable long-distance journeys with a professional driver.</p>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<h3>Business Trips</h3>
-<p>Professional transportation for meetings and corporate travel.</p>
-</div>
-
-<div class="card">
-<div class="icon">🧑‍✈️</div>
-<h3>24/7 Designated Driver</h3>
-<p>Hire a professional designated driver when you need one.</p>
-</div>
-
-<div class="card">
-<div class="icon">🌍</div>
-<h3>Long Distance</h3>
-<p>Travel comfortably between cities and destinations across South Africa.</p>
-</div>
-
-<div class="card">
-<div class="icon">⭐</div>
-<h3>Private Hire</h3>
-<p>Book a private vehicle and driver for your transportation needs.</p>
-</div>
-
-</div>
-
+  </div>
 </section>
 
+<section id="gallery">
+  <h2>Our Work</h2>
 
-<section class="about" id="about">
+  <div class="gallery">
 
-<div class="section-title">
-<h2>About Private Drive Expo</h2>
-</div>
+    <img src="advertisement.png" alt="Private Drive Expo Advertisement">
 
-<div class="about-content">
+    <img src="business-card.png" alt="Private Drive Expo Business Card">
 
-<p>
-<strong class="highlight">Private Drive Expo (Pty) Ltd</strong>
-is a South African private transport company focused on providing
-professional, reliable and comfortable transportation services.
-</p>
+    <img src="logo.png" alt="Private Drive Expo Logo">
 
-<p>
-Whether you are travelling to the airport, attending a business meeting,
-taking a family trip or travelling long distance, we are ready to assist.
-</p>
+    <img src="sticker.png" alt="Private Drive Expo Sticker">
 
-</div>
+    <img src="vehicle-1.png" alt="Private Drive Expo Vehicle">
 
+  </div>
 </section>
-
-
-<section id="vehicles">
-
-<div class="section-title">
-<h2>Our Vehicle</h2>
-<p>Professional private transport with comfort and style.</p>
-</div>
-
-<div class="image-section">
-
-<img src="vehicle-1.png"
-alt="Private Drive Expo Vehicle">
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="section-title">
-
-<h2>Private Drive Expo Branding</h2>
-
-<p>Our professional company branding.</p>
-
-</div>
-
-<div class="brand-grid">
-
-<img src="business-card.png"
-alt="Private Drive Expo Business Card">
-
-<img src="sticker.png"
-alt="Private Drive Expo Vehicle Sticker">
-
-<img src="advertisement.png"
-alt="Private Drive Expo Advertisement">
-
-</div>
-
-</section>
-
-
-<section class="driver-section" id="drivers">
-
-<div class="driver-box">
-
-<h2>Drive With Private Drive Expo</h2>
-
-<br>
-
-<p>
-Are you a professional driver looking for an opportunity
-in the e-hailing industry?
-</p>
-
-<br>
-
-<p>
-Private Drive Expo offers opportunities for suitable drivers
-to operate through our company structure using registered profiles
-and company vehicles, subject to our requirements and verification.
-</p>
-
-<br>
-
-<a class="btn btn-gold"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20am%20interested%20in%20the%20driver%20opportunity.">
-APPLY TO DRIVE
-</a>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="section-title">
-
-<h2>Need a Personal Driver?</h2>
-
-<p>Hire a professional driver for your personal transportation needs.</p>
-
-</div>
-
-<div class="card">
-
-<p>
-Need someone to drive you, your family or your vehicle?
-Contact Private Drive Expo to discuss your requirements.
-</p>
-
-<br>
-
-<a class="btn btn-gold"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20would%20like%20to%20hire%20a%20personal%20driver.">
-HIRE A DRIVER
-</a>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="section-title">
-
-<h2>Business Verification</h2>
-
-<p>Company information for client verification.</p>
-
-</div>
-
-<div class="verify">
-
-<p>
-<strong>Company Name:</strong><br>
-Private Drive Expo (Pty) Ltd
-</p>
-
-<p>
-<strong>CIPC Registration:</strong><br>
-2026/629829/07
-</p>
-
-<p>
-<strong>Registration Date:</strong><br>
-07 August 2026
-</p>
-
-<p>
-<strong>Company Status:</strong><br>
-IN BUSINESS
-</p>
-
-<p>
-<strong>Enterprise Type:</strong><br>
-PRIVATE COMPANY
-</p>
-
-<p>
-<strong>SARS Tax Reference:</strong><br>
-9322880262
-</p>
-
-<p>
-<strong>Business Address:</strong><br>
-17436 Extension 8A Soshanguve South, 0152
-</p>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="section-title">
-
-<h2>Rate Our Service</h2>
-
-<p>Your feedback helps us improve.</p>
-
-</div>
-
-<div class="rating">
-
-<div class="stars">★★★★★</div>
-
-<p>We aim to provide a 5-star experience on every journey.</p>
-
-<br>
-
-<a class="btn btn-gold"
-href="https://wa.me/27723850359?text=Private%20Drive%20Expo%20rating:%20I%20would%20like%20to%20rate%20your%20service.">
-RATE US
-</a>
-
-</div>
-
-</section>
-
 
 <section id="contact">
+  <div class="contact">
+    <h2>Contact Private Drive Expo</h2>
 
-<div class="section-title">
+    <p><strong>Location:</strong> Soshanguve, Gauteng</p>
 
-<h2>Contact Us</h2>
+    <p>Contact us today to arrange your private transport.</p>
 
-<p>Book your next journey with Private Drive Expo.</p>
-
-</div>
-
-<div class="contact-box">
-
-<div class="contact-item">
-📞 <strong>Phone:</strong>
-<a href="tel:0723850359">072 385 0359</a>
-</div>
-
-<div class="contact-item">
-💬 <strong>WhatsApp:</strong>
-<a href="https://wa.me/27723850359">
-+27 72 385 0359
-</a>
-</div>
-
-<div class="contact-item">
-📧 <strong>Email:</strong>
-<a href="mailto:privatedriveexpo@gmail.com">
-privatedriveexpo@gmail.com
-</a>
-</div>
-
-<div class="contact-item">
-📍 <strong>Address:</strong><br>
-17436 Extension 8A Soshanguve South, 0152
-</div>
-
-</div>
-
-<div class="social">
-
-<a href="#">Facebook</a>
-<a href="#">Instagram</a>
-
-</div>
-
+    <a class="button" href="https://wa.me/27700000000">
+      WhatsApp Us
+    </a>
+  </div>
 </section>
 
-
 <footer>
-
-<p>
-<strong>PRIVATE DRIVE EXPO (PTY) LTD</strong>
-</p>
-
-<p>Professional Private Transportation Services</p>
-
-<br>
-
-<p>
-Company Registration:
-<strong>2026/629829/07</strong>
-</p>
-
-<p>
-Registration Date:
-<strong>07 August 2026</strong>
-</p>
-
-<p>
-SARS Tax Reference:
-<strong>9322880262</strong>
-</p>
-
-<p>
-Business Address:
-<strong>17436 Extension 8A Soshanguve South, 0152</strong>
-</p>
-
-<br>
-
-<p>
-Email:
-<strong>privatedriveexpo@gmail.com</strong>
-</p>
-
-<br>
-
-<p>
-© 2026 Private Drive Expo (Pty) Ltd.
-All Rights Reserved.
-</p>
-
+  <p>© 2026 Private Drive Expo. All Rights Reserved.</p>
+  <p>Soshanguve, Gauteng</p>
 </footer>
 
-
-<a class="whatsapp"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20would%20like%20to%20make%20an%20enquiry."
-aria-label="WhatsApp">
-💬
+<a class="whatsapp" href="https://wa.me/27700000000" aria-label="WhatsApp">
+  ☎
 </a>
-
-
-<div class="mobile-bar">
-
-<a class="call"
-href="tel:0723850359">
-📞 CALL
-</a>
-
-<a class="wa"
-href="https://wa.me/27723850359">
-💬 WHATSAPP
-</a>
-
-</div>
 
 </body>
 </html>
