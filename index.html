@@ -1,1016 +1,890 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Private Drive Expo | Private Hire & Transport in Soshanguve</title>
+<title>Private Drive Expo | Professional Private Transport</title>
 
-<meta name="description" content="Private Drive Expo provides professional private-hire transportation in Soshanguve and surrounding areas. Call or WhatsApp 072 385 0359.">
-
-<meta name="theme-color" content="#080808">
+<meta name="description" content="Private Drive Expo provides professional private transport, airport transfers, family trips, road trips, business travel and designated driver services in South Africa.">
 
 <style>
-:root{
---gold:#f4c430;
---black:#080808;
---dark:#101010;
---card:#151515;
---line:#292929;
---text:#fff;
---muted:#b7b7b7;
---wa:#25d366
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
-
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
 
 body{
-margin:0;
-background:var(--black);
-color:var(--text);
-font-family:Arial,Helvetica,sans-serif;
-line-height:1.6
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080808;
+    color:#fff;
+    line-height:1.6;
 }
 
-a{
-text-decoration:none;
-color:inherit
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#080808;
+    border-bottom:1px solid #c9a227;
 }
-
-.wrap{
-max-width:1150px;
-margin:auto;
-padding:0 20px
-}
-
-/* NAVIGATION */
 
 nav{
-position:sticky;
-top:0;
-z-index:50;
-background:rgba(8,8,8,.96);
-border-bottom:1px solid var(--line);
-backdrop-filter:blur(12px)
+    max-width:1200px;
+    margin:auto;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.navin{
-height:72px;
-display:flex;
-align-items:center;
-justify-content:space-between
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-.brand{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:900;
-letter-spacing:.5px
+.logo-area img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+    border-radius:50%;
 }
 
-.logo{
-width:44px;
-height:44px;
-border:2px solid var(--gold);
-border-radius:50%;
-display:grid;
-place-items:center;
-color:var(--gold);
-font-weight:900;
-font-size:14px
+.logo-text{
+    color:#d4af37;
+    font-weight:bold;
+    font-size:18px;
 }
 
-.brand span{
-color:var(--gold)
+nav ul{
+    display:flex;
+    gap:22px;
+    list-style:none;
 }
 
-.navlinks{
-display:flex;
-gap:22px;
-align-items:center;
-font-size:14px;
-font-weight:700
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.navlinks a:hover{
-color:var(--gold)
+nav a:hover{
+    color:#d4af37;
 }
-
-.navcta{
-background:var(--gold);
-color:#000;
-padding:10px 15px;
-border-radius:8px
-}
-
-/* HERO */
 
 .hero{
-min-height:82vh;
-display:flex;
-align-items:center;
-background:
-radial-gradient(circle at 85% 15%,#4b3b0c 0,#191405 20%,#080808 55%)
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.80)),
+        url("hero-photo.jpg") center/cover no-repeat;
 }
 
-.heroGrid{
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:50px;
-align-items:center;
-padding:75px 0
-}
-
-.eyebrow{
-color:var(--gold);
-font-size:12px;
-font-weight:900;
-letter-spacing:2px;
-text-transform:uppercase
+.hero-content{
+    max-width:850px;
 }
 
 .hero h1{
-font-size:clamp(46px,7vw,78px);
-line-height:.98;
-margin:14px 0
+    font-size:55px;
+    color:#d4af37;
+    margin-bottom:15px;
 }
 
-.gold{
-color:var(--gold)
+.hero h2{
+    font-size:30px;
+    margin-bottom:15px;
 }
 
-.lead{
-font-size:19px;
-color:#ddd;
-max-width:650px
-}
-
-.actions{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-margin-top:28px
+.hero p{
+    font-size:19px;
+    margin-bottom:30px;
 }
 
 .btn{
-display:inline-block;
-padding:14px 20px;
-border-radius:9px;
-font-weight:900;
-border:1px solid var(--line)
+    display:inline-block;
+    padding:14px 25px;
+    margin:6px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.call{
-background:var(--gold);
-color:#000
+.btn-gold{
+    background:#d4af37;
+    color:#000;
 }
 
-.whatsapp{
-background:var(--wa);
-color:#031107
+.btn-dark{
+    border:1px solid #d4af37;
+    color:#fff;
 }
-
-.outline{
-background:#111
-}
-
-.heroCard{
-border:1px solid #3a3a3a;
-border-radius:22px;
-padding:35px;
-background:linear-gradient(145deg,#1d1808,#111);
-box-shadow:0 25px 70px #000
-}
-
-.heroCard .big{
-font-size:62px;
-font-weight:900;
-color:var(--gold);
-line-height:1
-}
-
-.heroCard h2{
-margin:8px 0
-}
-
-.heroCard p{
-color:var(--muted)
-}
-
-.mini{
-border-top:1px solid #3a3a3a;
-margin-top:25px;
-padding-top:20px;
-font-size:14px;
-color:#ccc
-}
-
-/* TRUST */
-
-.trust{
-border-top:1px solid var(--line);
-border-bottom:1px solid var(--line);
-background:#0d0d0d
-}
-
-.trustGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr)
-}
-
-.trustItem{
-text-align:center;
-padding:21px;
-border-right:1px solid var(--line)
-}
-
-.trustItem:last-child{
-border:0
-}
-
-.trustItem b{
-display:block;
-color:var(--gold)
-}
-
-/* SECTIONS */
 
 section{
-padding:82px 0
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
 }
 
-.heading{
-text-align:center;
-margin-bottom:42px
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.heading h2{
-font-size:40px;
-margin:7px 0
+.section-title h2{
+    color:#d4af37;
+    font-size:35px;
 }
 
-.heading p{
-color:var(--muted);
-margin:0
+.section-title p{
+    color:#bbb;
 }
 
-/* SERVICES */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
 }
 
 .card{
-background:linear-gradient(145deg,#181818,#101010);
-border:1px solid var(--line);
-border-radius:14px;
-padding:25px;
-min-height:210px
+    background:#111;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
 }
 
-.icon{
-font-size:30px;
-color:var(--gold)
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#d4af37;
 }
 
 .card h3{
-margin:12px 0 7px
+    color:#d4af37;
+    margin-bottom:10px;
 }
 
 .card p{
-color:var(--muted);
-font-size:14px
+    color:#ccc;
 }
 
-/* ABOUT */
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
 
 .about{
-background:#0d0d0d
+    background:#0e0e0e;
 }
 
-.aboutGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:35px;
-align-items:center
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
 }
 
-.about p{
-color:#ccc
+.about-content p{
+    color:#ccc;
+    margin-bottom:15px;
 }
 
-.info{
-border-left:4px solid var(--gold);
-background:#151515;
-border-radius:12px;
-padding:28px
+.highlight{
+    color:#d4af37;
+    font-weight:bold;
 }
 
-.info strong{
-color:var(--gold)
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-/* BOOKING */
-
-.booking{
-background:linear-gradient(135deg,#1b1608,#090909)
+.gallery img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:12px;
+    border:1px solid #333;
+    transition:.3s;
 }
 
-.bookGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:22px
+.gallery img:hover{
+    transform:scale(1.03);
+    border-color:#d4af37;
 }
 
-.bookCard{
-background:#0e0e0e;
-border:1px solid #333;
-border-radius:15px;
-padding:30px
+.brand-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-.step{
-display:flex;
-gap:14px;
-margin:20px 0
+.brand-gallery img{
+    width:100%;
+    border-radius:12px;
+    border:1px solid #444;
 }
 
-.num{
-min-width:34px;
-height:34px;
-border-radius:50%;
-background:var(--gold);
-color:#000;
-display:grid;
-place-items:center;
-font-weight:900
+.verify{
+    background:#101010;
+    border:1px solid #d4af37;
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
 }
 
-.step p{
-margin:0;
-color:#bbb
+.verify p{
+    margin:8px 0;
 }
 
-/* CONTACT */
-
-.contact{
-background:#080808
+.verify strong{
+    color:#d4af37;
 }
 
-.contactGrid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
+.driver-section{
+    background:
+        linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
+        url("advertisement.jpg") center/cover;
+    border-top:1px solid #333;
+    border-bottom:1px solid #333;
 }
 
-.contactBox{
-background:#121212;
-border:1px solid var(--line);
-border-radius:12px;
-padding:24px
+.driver-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
 }
 
-.contactBox b{
-display:block;
-color:var(--gold);
-margin-bottom:6px
+.driver-box h2{
+    color:#d4af37;
+    font-size:35px;
+    margin-bottom:15px;
 }
 
-.contactBox a:hover{
-color:var(--gold)
+.rating{
+    text-align:center;
 }
 
-/* FOOTER */
+.stars{
+    font-size:40px;
+    color:#d4af37;
+    letter-spacing:5px;
+}
+
+.contact-box{
+    text-align:center;
+}
+
+.contact-item{
+    margin:12px 0;
+    font-size:18px;
+}
+
+.contact-item a{
+    color:#d4af37;
+    text-decoration:none;
+}
 
 footer{
-text-align:center;
-background:#030303;
-border-top:1px solid #222;
-padding:32px 18px;
-color:#888;
-font-size:13px
+    background:#000;
+    border-top:1px solid #d4af37;
+    text-align:center;
+    padding:35px 20px 90px;
+    color:#aaa;
 }
 
 footer strong{
-color:#fff
+    color:#d4af37;
 }
 
-/* FLOATING WHATSAPP */
-
-.float{
-position:fixed;
-right:18px;
-bottom:18px;
-z-index:40;
-background:var(--wa);
-color:#031107;
-width:60px;
-height:60px;
-border-radius:50%;
-display:grid;
-place-items:center;
-font-weight:900;
-font-size:25px;
-box-shadow:0 10px 30px #000
+.social{
+    margin-top:20px;
 }
 
-.mobileBar{
-display:none
+.social a{
+    display:inline-block;
+    margin:5px;
+    padding:10px 18px;
+    border:1px solid #d4af37;
+    border-radius:5px;
+    color:#d4af37;
+    text-decoration:none;
 }
 
-/* TABLET */
-
-@media(max-width:850px){
-
-.navlinks a:not(.navcta){
-display:none
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    z-index:999;
+    box-shadow:0 3px 15px #000;
 }
 
-.heroGrid,
-.aboutGrid,
-.bookGrid{
-grid-template-columns:1fr
+.mobile-bar{
+    display:none;
 }
 
-.cards{
-grid-template-columns:1fr 1fr
-}
+@media(max-width:800px){
 
-.trustGrid{
-grid-template-columns:1fr 1fr
-}
+    nav ul{
+        display:none;
+    }
 
-.trustItem:nth-child(2){
-border-right:0
-}
+    .hero h1{
+        font-size:40px;
+    }
 
-}
+    .hero h2{
+        font-size:24px;
+    }
 
-/* PHONE */
+    .hero{
+        min-height:600px;
+    }
 
-@media(max-width:560px){
+    .mobile-bar{
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index:998;
+        display:flex;
+    }
 
-.wrap{
-padding:0 16px
-}
+    .mobile-bar a{
+        width:50%;
+        padding:15px;
+        text-align:center;
+        color:#fff;
+        text-decoration:none;
+        font-weight:bold;
+    }
 
-.navin{
-height:64px
-}
+    .call{
+        background:#222;
+    }
 
-.brand{
-font-size:13px
-}
+    .wa{
+        background:#25D366;
+    }
 
-.logo{
-width:38px;
-height:38px
-}
-
-.hero{
-min-height:auto
-}
-
-.heroGrid{
-padding:55px 0
-}
-
-.heroCard{
-padding:25px
-}
-
-.hero h1{
-font-size:50px
-}
-
-.lead{
-font-size:17px
-}
-
-.cards,
-.contactGrid{
-grid-template-columns:1fr
-}
-
-.trustGrid{
-grid-template-columns:1fr
-}
-
-.trustItem{
-border-right:0;
-border-bottom:1px solid var(--line)
-}
-
-.trustItem:last-child{
-border-bottom:0
-}
-
-.heading h2{
-font-size:33px
-}
-
-.float{
-bottom:76px
-}
-
-.mobileBar{
-display:flex;
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-z-index:45;
-background:#0b0b0b;
-border-top:1px solid #333;
-padding:8px;
-gap:8px
-}
-
-.mobileBar a{
-flex:1;
-text-align:center;
-padding:10px 5px;
-border-radius:8px;
-font-weight:900;
-font-size:13px
-}
-
-.mobileBar .mcall{
-background:var(--gold);
-color:#000
-}
-
-.mobileBar .mwa{
-background:var(--wa);
-color:#031107
-}
-
+    .whatsapp{
+        bottom:70px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<header>
 <nav>
-<div class="wrap navin">
 
-<a class="brand" href="#home">
-<div class="logo">PDX</div>
-<div>PRIVATE <span>DRIVE</span> EXPO</div>
-</a>
-
-<div class="navlinks">
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#booking">Booking</a>
-<a href="#contact">Contact</a>
-
-<a class="navcta"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo%2C%20I%20would%20like%20to%20book%20a%20ride."
-target="_blank">
-WhatsApp
-</a>
-
+<div class="logo-area">
+<img src="logo.png" alt="Private Drive Expo Logo">
+<div class="logo-text">PRIVATE DRIVE EXPO</div>
 </div>
-</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#vehicles">Vehicles</a></li>
+<li><a href="#drivers">Drivers</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 </nav>
-
-
-<header id="home" class="hero">
-
-<div class="wrap heroGrid">
-
-<div>
-
-<div class="eyebrow">
-Private Hire • Soshanguve • Gauteng
-</div>
-
-<h1>
-Your Ride.<br>
-<span class="gold">Our Priority.</span>
-</h1>
-
-<p class="lead">
-Professional private transportation you can count on — for local trips, airport transfers, business travel and longer journeys.
-</p>
-
-<div class="actions">
-
-<a class="btn call"
-href="tel:0723850359">
-☎ Call 072 385 0359
-</a>
-
-<a class="btn whatsapp"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo%2C%20I%20would%20like%20to%20book%20a%20ride.%0A%0APickup%3A%0ADestination%3A%0ADate%3A%0ATime%3A"
-target="_blank">
-WhatsApp a Booking
-</a>
-
-</div>
-
-</div>
-
-
-<div class="heroCard">
-
-<div class="big">PDX</div>
-
-<h2>Private Drive Expo</h2>
-
-<p>
-Professional private-hire transportation based in Soshanguve South.
-</p>
-
-<div class="mini">
-✓ Safe & professional<br>
-✓ Comfortable private rides<br>
-✓ Local & long-distance travel
-</div>
-
-</div>
-
-</div>
-
 </header>
 
 
-<div class="trust">
+<!-- HERO -->
 
-<div class="wrap trustGrid">
+<section class="hero" id="home">
 
-<div class="trustItem">
-<b>SAFE</b>
-<span>Professional service</span>
+<div class="hero-content">
+
+<h1>PRIVATE DRIVE EXPO</h1>
+
+<h2>Your Ride. Our Priority.</h2>
+
+<p>
+Professional, reliable and comfortable private transport services.
+From everyday journeys to airport transfers, family trips,
+business travel and long-distance road trips.
+</p>
+
+<a class="btn btn-gold"
+href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20would%20like%20to%20make%20a%20booking.">
+BOOK ON WHATSAPP
+</a>
+
+<a class="btn btn-dark"
+href="tel:0723850359">
+CALL NOW
+</a>
+
 </div>
 
-<div class="trustItem">
-<b>RELIABLE</b>
-<span>Dependable transport</span>
-</div>
+</section>
 
-<div class="trustItem">
-<b>COMFORTABLE</b>
-<span>Ride with confidence</span>
-</div>
 
-<div class="trustItem">
-<b>CONVENIENT</b>
-<span>Easy booking by phone</span>
-</div>
-
-</div>
-
-</div>
-
+<!-- SERVICES -->
 
 <section id="services">
 
-<div class="wrap">
-
-<div class="heading">
-
-<div class="eyebrow">
-Our services
+<div class="section-title">
+<h2>Our Services</h2>
+<p>Professional transport for every occasion.</p>
 </div>
 
-<h2>
-Transport For Every Journey
-</h2>
-
-<p>
-Private-hire solutions for personal and business travel.
-</p>
-
-</div>
-
-
-<div class="cards">
+<div class="grid">
 
 <div class="card">
-
-<div class="icon">✈</div>
-
-<h3>
-Airport Transfers
-</h3>
-
-<p>
-Comfortable transport to and from the airport with a smooth, planned journey.
-</p>
-
+<div class="icon">✈️</div>
+<h3>Airport Transfers</h3>
+<p>Reliable airport transportation for individuals, families and business travellers.</p>
 </div>
 
-
 <div class="card">
-
-<div class="icon">🚘</div>
-
-<h3>
-Local Rides
-</h3>
-
-<p>
-Private transport around Soshanguve and surrounding areas for everyday trips.
-</p>
-
+<div class="icon">🚗</div>
+<h3>Local Rides</h3>
+<p>Safe and convenient private transportation around town.</p>
 </div>
 
+<div class="card">
+<div class="icon">👨‍👩‍👧‍👦</div>
+<h3>Family Trips</h3>
+<p>Comfortable private transport for families and special occasions.</p>
+</div>
 
 <div class="card">
+<div class="icon">🛣️</div>
+<h3>Road Trips</h3>
+<p>Enjoy comfortable long-distance journeys with a professional driver.</p>
+</div>
 
+<div class="card">
 <div class="icon">💼</div>
+<h3>Business Trips</h3>
+<p>Professional transportation for meetings, corporate travel and business events.</p>
+</div>
 
-<h3>
-Business Travel
-</h3>
+<div class="card">
+<div class="icon">🧑‍✈️</div>
+<h3>24/7 Designated Driver</h3>
+<p>Hire a professional designated driver when you need one.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Long Distance</h3>
+<p>Travel comfortably between cities and destinations across South Africa.</p>
+</div>
+
+<div class="card">
+<div class="icon">⭐</div>
+<h3>Private Hire</h3>
+<p>Book a private vehicle and driver for your personal transportation needs.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="section-title">
+<h2>About Private Drive Expo</h2>
+</div>
+
+<div class="about-content">
 
 <p>
-Professional transport for meetings, appointments and work-related journeys.
+<strong class="highlight">Private Drive Expo (Pty) Ltd</strong>
+is a South African private transport company focused on providing
+professional, reliable and comfortable transportation services.
+</p>
+
+<p>
+Our goal is to make every journey safe, convenient and stress-free.
+Whether you are travelling to the airport, attending a business meeting,
+taking a family trip or travelling long distance, we are ready to assist.
+</p>
+
+<p>
+We also provide opportunities for drivers interested in
+e-hailing and professional driving services.
 </p>
 
 </div>
 
+</section>
+
+
+<!-- VEHICLES -->
+
+<section id="vehicles">
+
+<div class="section-title">
+
+<h2>Our Vehicles</h2>
+
+<p>
+Comfortable vehicles for private, family and business transportation.
+</p>
+
+</div>
+
+<div class="gallery">
+
+<img src="vehicle-1.jpg" alt="Private Drive Expo Vehicle 1">
+
+<img src="vehicle-2.jpg" alt="Private Drive Expo Vehicle 2">
+
+<img src="vehicle-3.jpg" alt="Private Drive Expo Vehicle 3">
+
+<img src="vehicle-4.jpg" alt="Private Drive Expo Vehicle 4">
+
+</div>
+
+</section>
+
+
+<!-- BRANDING -->
+
+<section>
+
+<div class="section-title">
+
+<h2>Our Brand</h2>
+
+<p>Professional branding for Private Drive Expo.</p>
+
+</div>
+
+<div class="brand-gallery">
+
+<img src="business-card.jpg" alt="Private Drive Expo Business Card">
+
+<img src="sticker-design.jpg" alt="Private Drive Expo Vehicle Sticker">
+
+<img src="advertisement.jpg" alt="Private Drive Expo Advertisement">
+
+</div>
+
+</section>
+
+
+<!-- DRIVER RECRUITMENT -->
+
+<section class="driver-section" id="drivers">
+
+<div class="driver-box">
+
+<h2>Drive With Private Drive Expo</h2>
+
+<p>
+Are you a professional driver looking for an opportunity
+to work in the e-hailing industry?
+</p>
+
+<br>
+
+<p>
+Private Drive Expo offers opportunities for drivers to operate
+through our company structure using registered profiles and
+company vehicles, subject to our requirements and verification process.
+</p>
+
+<br>
+
+<a class="btn btn-gold"
+href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20am%20interested%20in%20the%20driver%20opportunity.">
+APPLY TO DRIVE
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PERSONAL DRIVER -->
+
+<section>
+
+<div class="section-title">
+
+<h2>Need a Personal Driver?</h2>
+
+<p>
+Hire a professional driver for your personal transportation needs.
+</p>
+
+</div>
 
 <div class="card">
 
-<div class="icon">🛣</div>
-
-<h3>
-Long Distance
-</h3>
-
 <p>
-Pre-arranged private trips for longer journeys across Gauteng and beyond.
+Need someone to drive you, your family or your vehicle?
+Contact Private Drive Expo to discuss your requirements.
 </p>
 
-</div>
+<br>
 
-</div>
+<a class="btn btn-gold"
+href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20would%20like%20to%20hire%20a%20personal%20driver.">
+HIRE A DRIVER
+</a>
 
 </div>
 
 </section>
 
 
-<section id="about" class="about">
+<!-- BUSINESS VERIFICATION -->
 
-<div class="wrap aboutGrid">
+<section>
 
-<div>
+<div class="section-title">
 
-<div class="eyebrow">
-Why choose us
-</div>
-
-<h2>
-Professional service with a personal touch.
-</h2>
+<h2>Business Verification</h2>
 
 <p>
-Private Drive Expo is focused on making every journey simple, comfortable and dependable.
-Whether you are travelling across Soshanguve or planning a longer trip, we aim to give you a professional private-hire experience from booking to arrival.
-</p>
-
-<p>
-<strong>Need a ride?</strong>
-Contact us directly and tell us your pickup point, destination, date and preferred time.
+Our company information is available for client verification.
 </p>
 
 </div>
 
-
-<div class="info">
-
-<strong>
-BUSINESS DETAILS
-</strong>
+<div class="verify">
 
 <p>
-<b>Private Drive Expo</b><br>
-Private Hire & Transportation
+<strong>Company Name:</strong><br>
+Private Drive Expo (Pty) Ltd
 </p>
 
 <p>
-<b>Phone / WhatsApp</b><br>
-<a href="tel:0723850359">
-072 385 0359
-</a>
+<strong>CIPC Registration Number:</strong><br>
+2026/629829/07
 </p>
 
 <p>
-<b>Business Address</b><br>
+<strong>Registration Date:</strong><br>
+07 August 2026
+</p>
+
+<p>
+<strong>Company Status:</strong><br>
+IN BUSINESS
+</p>
+
+<p>
+<strong>Enterprise Type:</strong><br>
+PRIVATE COMPANY
+</p>
+
+<p>
+<strong>SARS Tax Reference:</strong><br>
+9322880262
+</p>
+
+<p>
+<strong>Business Address:</strong><br>
 17436 Extension 8A Soshanguve South, 0152
 </p>
 
 </div>
 
-</div>
-
 </section>
 
 
-<section id="booking" class="booking">
+<!-- RATING -->
 
-<div class="wrap">
+<section>
 
-<div class="heading">
+<div class="section-title">
 
-<div class="eyebrow">
-Simple booking
-</div>
-
-<h2>
-Book Your Ride
-</h2>
+<h2>Rate Our Service</h2>
 
 <p>
-WhatsApp us with a few details and we can discuss your trip.
+Your feedback helps us improve our service.
 </p>
 
 </div>
 
+<div class="rating">
 
-<div class="bookGrid">
-
-<div class="bookCard">
-
-<div class="step">
-
-<div class="num">1</div>
+<div class="stars">
+★★★★★
+</div>
 
 <p>
-<b>Send your pickup location</b><br>
-Tell us where you need to be collected.
+We aim to provide a 5-star experience on every journey.
 </p>
 
-</div>
+<br>
 
-
-<div class="step">
-
-<div class="num">2</div>
-
-<p>
-<b>Send your destination</b><br>
-Tell us where you are going.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="num">3</div>
-
-<p>
-<b>Send date & time</b><br>
-Include your preferred travel time.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="bookCard">
-
-<h3>
-Ready to travel?
-</h3>
-
-<p style="color:#bbb">
-Start your booking directly on WhatsApp. Your message will already include prompts for the information we need.
-</p>
-
-<div class="actions">
-
-<a class="btn whatsapp"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo%2C%20I%20would%20like%20to%20book%20a%20ride.%0A%0APickup%3A%0ADestination%3A%0ADate%3A%0ATime%3A"
-target="_blank">
-Start WhatsApp Booking
+<a class="btn btn-gold"
+href="https://wa.me/27723850359?text=Private%20Drive%20Expo%20rating:%20I%20would%20like%20to%20rate%20your%20service.">
+RATE US
 </a>
-
-<a class="btn outline"
-href="tel:0723850359">
-Call Us
-</a>
-
-</div>
-
-</div>
-
-</div>
 
 </div>
 
 </section>
 
 
-<section id="contact" class="contact">
+<!-- CONTACT -->
 
-<div class="wrap">
+<section id="contact">
 
-<div class="heading">
+<div class="section-title">
 
-<div class="eyebrow">
-Get in touch
-</div>
+<h2>Contact Us</h2>
 
-<h2>
-Contact Private Drive Expo
-</h2>
+<p>Book your next journey with Private Drive Expo.</p>
 
 </div>
 
+<div class="contact-box">
 
-<div class="contactGrid">
+<div class="contact-item">
+📞 <strong>Phone:</strong>
+<a href="tel:0723850359">072 385 0359</a>
+</div>
 
-<div class="contactBox">
-
-<b>PHONE</b>
-
-<a href="tel:0723850359">
-072 385 0359
+<div class="contact-item">
+💬 <strong>WhatsApp:</strong>
+<a href="https://wa.me/27723850359">
++27 72 385 0359
 </a>
-
 </div>
 
-
-<div class="contactBox">
-
-<b>WHATSAPP</b>
-
-<a href="https://wa.me/27723850359"
-target="_blank">
-Chat with us
+<div class="contact-item">
+📧 <strong>Email:</strong>
+<a href="mailto:privatedriveexpo@gmail.com">
+privatedriveexpo@gmail.com
 </a>
-
 </div>
 
-
-<div class="contactBox">
-
-<b>ADDRESS</b>
-
-<span>
+<div class="contact-item">
+📍 <strong>Address:</strong><br>
 17436 Extension 8A Soshanguve South, 0152
-</span>
-
 </div>
 
 </div>
+
+
+<div class="social">
+
+<a href="#" target="_blank">
+Facebook
+</a>
+
+<a href="#" target="_blank">
+Instagram
+</a>
 
 </div>
 
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
-<strong>
-PRIVATE DRIVE EXPO
-</strong>
+<p>
+<strong>PRIVATE DRIVE EXPO (PTY) LTD</strong>
+</p>
+
+<p>
+Professional Private Transportation Services
+</p>
 
 <br>
 
-Private Hire & Transportation • Soshanguve
+<p>
+Company Registration:
+<strong>2026/629829/07</strong>
+</p>
+
+<p>
+Registration Date:
+<strong>07 August 2026</strong>
+</p>
+
+<p>
+SARS Tax Reference:
+<strong>9322880262</strong>
+</p>
+
+<p>
+Business Address:
+<strong>17436 Extension 8A Soshanguve South, 0152</strong>
+</p>
 
 <br>
 
-© 2026 Private Drive Expo. All rights reserved.
+<p>
+Email:
+<strong>privatedriveexpo@gmail.com</strong>
+</p>
+
+<br>
+
+<p>
+© 2026 Private Drive Expo (Pty) Ltd.
+All Rights Reserved.
+</p>
 
 </footer>
 
 
-<a class="float"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo%2C%20I%20would%20like%20to%20book%20a%20ride."
-target="_blank"
+<!-- FLOATING WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20would%20like%20to%20make%20an%20enquiry."
 aria-label="WhatsApp">
-◉
+💬
 </a>
 
 
-<div class="mobileBar">
+<!-- MOBILE CONTACT BAR -->
 
-<a class="mcall"
+<div class="mobile-bar">
+
+<a class="call"
 href="tel:0723850359">
-☎ Call
+📞 CALL
 </a>
 
-<a class="mwa"
-href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo%2C%20I%20would%20like%20to%20book%20a%20ride."
-target="_blank">
-WhatsApp
+<a class="wa"
+href="https://wa.me/27723850359">
+💬 WHATSAPP
 </a>
 
 </div>
+
 
 </body>
 </html>
