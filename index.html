@@ -6,7 +6,7 @@
 
 <title>Private Drive Expo | Professional Private Transport</title>
 
-<meta name="description" content="Private Drive Expo provides professional private transport, airport transfers, family trips, road trips, business travel and designated driver services in South Africa.">
+<meta name="description" content="Private Drive Expo (Pty) Ltd provides professional private transport, airport transfers, family trips, road trips, business travel and designated driver services.">
 
 <style>
 *{
@@ -17,7 +17,7 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#080808;
     color:#fff;
     line-height:1.6;
@@ -28,13 +28,13 @@ header{
     top:0;
     z-index:1000;
     background:#080808;
-    border-bottom:1px solid #c9a227;
+    border-bottom:1px solid #d4af37;
 }
 
 nav{
     max-width:1200px;
     margin:auto;
-    padding:12px 20px;
+    padding:10px 20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -43,14 +43,13 @@ nav{
 .logo-area{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
 }
 
 .logo-area img{
     width:55px;
     height:55px;
     object-fit:contain;
-    border-radius:50%;
 }
 
 .logo-text{
@@ -61,7 +60,7 @@ nav{
 
 nav ul{
     display:flex;
-    gap:22px;
+    gap:20px;
     list-style:none;
 }
 
@@ -76,35 +75,42 @@ nav a:hover{
 }
 
 .hero{
-    min-height:650px;
+    min-height:600px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     padding:60px 20px;
     background:
-        linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.80)),
-        url("hero-photo.jpg") center/cover no-repeat;
+        linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.85)),
+        url("advertisement.png") center/cover no-repeat;
 }
 
 .hero-content{
     max-width:850px;
 }
 
+.hero img{
+    width:130px;
+    max-width:40%;
+    margin-bottom:20px;
+}
+
 .hero h1{
-    font-size:55px;
+    font-size:52px;
     color:#d4af37;
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 .hero h2{
-    font-size:30px;
+    font-size:28px;
     margin-bottom:15px;
 }
 
 .hero p{
-    font-size:19px;
-    margin-bottom:30px;
+    font-size:18px;
+    color:#ddd;
+    margin-bottom:25px;
 }
 
 .btn{
@@ -134,7 +140,7 @@ section{
 
 .section-title{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:40px;
 }
 
 .section-title h2{
@@ -158,11 +164,9 @@ section{
     border-radius:12px;
     padding:25px;
     text-align:center;
-    transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
     border-color:#d4af37;
 }
 
@@ -177,7 +181,7 @@ section{
 
 .icon{
     font-size:40px;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .about{
@@ -200,60 +204,34 @@ section{
     font-weight:bold;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.image-section{
+    text-align:center;
 }
 
-.gallery img{
+.image-section img{
     width:100%;
-    height:230px;
-    object-fit:cover;
+    max-width:850px;
     border-radius:12px;
-    border:1px solid #333;
-    transition:.3s;
+    border:1px solid #444;
+    margin:10px;
 }
 
-.gallery img:hover{
-    transform:scale(1.03);
-    border-color:#d4af37;
-}
-
-.brand-gallery{
+.brand-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
-.brand-gallery img{
+.brand-grid img{
     width:100%;
     border-radius:12px;
     border:1px solid #444;
 }
 
-.verify{
-    background:#101010;
-    border:1px solid #d4af37;
-    border-radius:12px;
-    padding:30px;
-    text-align:center;
-}
-
-.verify p{
-    margin:8px 0;
-}
-
-.verify strong{
-    color:#d4af37;
-}
-
 .driver-section{
     background:
-        linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
-        url("advertisement.jpg") center/cover;
-    border-top:1px solid #333;
-    border-bottom:1px solid #333;
+        linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+        url("advertisement.png") center/cover;
 }
 
 .driver-box{
@@ -265,7 +243,22 @@ section{
 .driver-box h2{
     color:#d4af37;
     font-size:35px;
-    margin-bottom:15px;
+}
+
+.verify{
+    background:#101010;
+    border:1px solid #d4af37;
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
+}
+
+.verify p{
+    margin:9px;
+}
+
+.verify strong{
+    color:#d4af37;
 }
 
 .rating{
@@ -273,8 +266,8 @@ section{
 }
 
 .stars{
-    font-size:40px;
     color:#d4af37;
+    font-size:40px;
     letter-spacing:5px;
 }
 
@@ -283,11 +276,26 @@ section{
 }
 
 .contact-item{
-    margin:12px 0;
+    margin:13px;
     font-size:18px;
 }
 
 .contact-item a{
+    color:#d4af37;
+    text-decoration:none;
+}
+
+.social{
+    text-align:center;
+    margin-top:25px;
+}
+
+.social a{
+    display:inline-block;
+    padding:10px 18px;
+    margin:5px;
+    border:1px solid #d4af37;
+    border-radius:5px;
     color:#d4af37;
     text-decoration:none;
 }
@@ -302,20 +310,6 @@ footer{
 
 footer strong{
     color:#d4af37;
-}
-
-.social{
-    margin-top:20px;
-}
-
-.social a{
-    display:inline-block;
-    margin:5px;
-    padding:10px 18px;
-    border:1px solid #d4af37;
-    border-radius:5px;
-    color:#d4af37;
-    text-decoration:none;
 }
 
 .whatsapp{
@@ -333,7 +327,6 @@ footer strong{
     font-size:28px;
     text-decoration:none;
     z-index:999;
-    box-shadow:0 3px 15px #000;
 }
 
 .mobile-bar{
@@ -347,15 +340,11 @@ footer strong{
     }
 
     .hero h1{
-        font-size:40px;
+        font-size:38px;
     }
 
     .hero h2{
-        font-size:24px;
-    }
-
-    .hero{
-        min-height:600px;
+        font-size:23px;
     }
 
     .mobile-bar{
@@ -414,20 +403,19 @@ footer strong{
 </header>
 
 
-<!-- HERO -->
-
 <section class="hero" id="home">
 
 <div class="hero-content">
+
+<img src="logo.png" alt="Private Drive Expo">
 
 <h1>PRIVATE DRIVE EXPO</h1>
 
 <h2>Your Ride. Our Priority.</h2>
 
 <p>
-Professional, reliable and comfortable private transport services.
-From everyday journeys to airport transfers, family trips,
-business travel and long-distance road trips.
+Professional, reliable and comfortable private transportation
+for individuals, families and businesses.
 </p>
 
 <a class="btn btn-gold"
@@ -444,8 +432,6 @@ CALL NOW
 
 </section>
 
-
-<!-- SERVICES -->
 
 <section id="services">
 
@@ -477,13 +463,13 @@ CALL NOW
 <div class="card">
 <div class="icon">🛣️</div>
 <h3>Road Trips</h3>
-<p>Enjoy comfortable long-distance journeys with a professional driver.</p>
+<p>Comfortable long-distance journeys with a professional driver.</p>
 </div>
 
 <div class="card">
 <div class="icon">💼</div>
 <h3>Business Trips</h3>
-<p>Professional transportation for meetings, corporate travel and business events.</p>
+<p>Professional transportation for meetings and corporate travel.</p>
 </div>
 
 <div class="card">
@@ -501,15 +487,13 @@ CALL NOW
 <div class="card">
 <div class="icon">⭐</div>
 <h3>Private Hire</h3>
-<p>Book a private vehicle and driver for your personal transportation needs.</p>
+<p>Book a private vehicle and driver for your transportation needs.</p>
 </div>
 
 </div>
 
 </section>
 
-
-<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -526,76 +510,57 @@ professional, reliable and comfortable transportation services.
 </p>
 
 <p>
-Our goal is to make every journey safe, convenient and stress-free.
 Whether you are travelling to the airport, attending a business meeting,
 taking a family trip or travelling long distance, we are ready to assist.
 </p>
 
-<p>
-We also provide opportunities for drivers interested in
-e-hailing and professional driving services.
-</p>
-
 </div>
 
 </section>
 
-
-<!-- VEHICLES -->
 
 <section id="vehicles">
 
 <div class="section-title">
-
-<h2>Our Vehicles</h2>
-
-<p>
-Comfortable vehicles for private, family and business transportation.
-</p>
-
+<h2>Our Vehicle</h2>
+<p>Professional private transport with comfort and style.</p>
 </div>
 
-<div class="gallery">
+<div class="image-section">
 
-<img src="vehicle-1.jpg" alt="Private Drive Expo Vehicle 1">
-
-<img src="vehicle-2.jpg" alt="Private Drive Expo Vehicle 2">
-
-<img src="vehicle-3.jpg" alt="Private Drive Expo Vehicle 3">
-
-<img src="vehicle-4.jpg" alt="Private Drive Expo Vehicle 4">
+<img src="vehicle-1.png"
+alt="Private Drive Expo Vehicle">
 
 </div>
 
 </section>
 
-
-<!-- BRANDING -->
 
 <section>
 
 <div class="section-title">
 
-<h2>Our Brand</h2>
+<h2>Private Drive Expo Branding</h2>
 
-<p>Professional branding for Private Drive Expo.</p>
+<p>Our professional company branding.</p>
 
 </div>
 
-<div class="brand-gallery">
+<div class="brand-grid">
 
-<img src="business-card.jpg" alt="Private Drive Expo Business Card">
+<img src="business-card.png"
+alt="Private Drive Expo Business Card">
 
-<img src="sticker-design.jpg" alt="Private Drive Expo Vehicle Sticker">
+<img src="sticker.png"
+alt="Private Drive Expo Vehicle Sticker">
 
-<img src="advertisement.jpg" alt="Private Drive Expo Advertisement">
+<img src="advertisement.png"
+alt="Private Drive Expo Advertisement">
 
 </div>
 
 </section>
 
-
-<!-- DRIVER RECRUITMENT -->
 
 <section class="driver-section" id="drivers">
 
@@ -603,17 +568,19 @@ Comfortable vehicles for private, family and business transportation.
 
 <h2>Drive With Private Drive Expo</h2>
 
+<br>
+
 <p>
 Are you a professional driver looking for an opportunity
-to work in the e-hailing industry?
+in the e-hailing industry?
 </p>
 
 <br>
 
 <p>
-Private Drive Expo offers opportunities for drivers to operate
-through our company structure using registered profiles and
-company vehicles, subject to our requirements and verification process.
+Private Drive Expo offers opportunities for suitable drivers
+to operate through our company structure using registered profiles
+and company vehicles, subject to our requirements and verification.
 </p>
 
 <br>
@@ -628,17 +595,13 @@ APPLY TO DRIVE
 </section>
 
 
-<!-- PERSONAL DRIVER -->
-
 <section>
 
 <div class="section-title">
 
 <h2>Need a Personal Driver?</h2>
 
-<p>
-Hire a professional driver for your personal transportation needs.
-</p>
+<p>Hire a professional driver for your personal transportation needs.</p>
 
 </div>
 
@@ -661,17 +624,13 @@ HIRE A DRIVER
 </section>
 
 
-<!-- BUSINESS VERIFICATION -->
-
 <section>
 
 <div class="section-title">
 
 <h2>Business Verification</h2>
 
-<p>
-Our company information is available for client verification.
-</p>
+<p>Company information for client verification.</p>
 
 </div>
 
@@ -683,7 +642,7 @@ Private Drive Expo (Pty) Ltd
 </p>
 
 <p>
-<strong>CIPC Registration Number:</strong><br>
+<strong>CIPC Registration:</strong><br>
 2026/629829/07
 </p>
 
@@ -717,29 +676,21 @@ PRIVATE COMPANY
 </section>
 
 
-<!-- RATING -->
-
 <section>
 
 <div class="section-title">
 
 <h2>Rate Our Service</h2>
 
-<p>
-Your feedback helps us improve our service.
-</p>
+<p>Your feedback helps us improve.</p>
 
 </div>
 
 <div class="rating">
 
-<div class="stars">
-★★★★★
-</div>
+<div class="stars">★★★★★</div>
 
-<p>
-We aim to provide a 5-star experience on every journey.
-</p>
+<p>We aim to provide a 5-star experience on every journey.</p>
 
 <br>
 
@@ -752,8 +703,6 @@ RATE US
 
 </section>
 
-
-<!-- CONTACT -->
 
 <section id="contact">
 
@@ -793,23 +742,15 @@ privatedriveexpo@gmail.com
 
 </div>
 
-
 <div class="social">
 
-<a href="#" target="_blank">
-Facebook
-</a>
-
-<a href="#" target="_blank">
-Instagram
-</a>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
 
 </div>
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -817,9 +758,7 @@ Instagram
 <strong>PRIVATE DRIVE EXPO (PTY) LTD</strong>
 </p>
 
-<p>
-Professional Private Transportation Services
-</p>
+<p>Professional Private Transportation Services</p>
 
 <br>
 
@@ -860,16 +799,12 @@ All Rights Reserved.
 </footer>
 
 
-<!-- FLOATING WHATSAPP -->
-
 <a class="whatsapp"
 href="https://wa.me/27723850359?text=Hello%20Private%20Drive%20Expo,%20I%20would%20like%20to%20make%20an%20enquiry."
 aria-label="WhatsApp">
 💬
 </a>
 
-
-<!-- MOBILE CONTACT BAR -->
 
 <div class="mobile-bar">
 
@@ -884,7 +819,6 @@ href="https://wa.me/27723850359">
 </a>
 
 </div>
-
 
 </body>
 </html>
