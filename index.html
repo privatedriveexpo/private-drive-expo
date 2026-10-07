@@ -6,332 +6,212 @@
 
 <title>Private Drive Expo | Private Transport South Africa</title>
 
-<meta name="description" content="Private Drive Expo provides professional, reliable and comfortable private transport services in South Africa.">
+<meta name="description" content="Private Drive Expo provides professional private-hire and transport services in South Africa. Contact us for bookings and reliable transport solutions.">
 
 <style>
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #111;
-  color: #fff;
-  line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
 header {
-  background: #000;
-  text-align: center;
-  padding: 18px 15px;
-  border-bottom: 2px solid #f5c400;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #c9a227;
 }
 
 header img {
-  width: 145px;
-  max-width: 70%;
+    max-width: 180px;
+    width: 70%;
+    height: auto;
 }
 
 nav {
-  margin-top: 12px;
+    background: #111;
+    padding: 12px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 8px;
-  font-weight: bold;
-  font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 7px;
+    font-size: 13px;
 }
 
 nav a:hover {
-  color: #f5c400;
+    color: #d4af37;
 }
 
 .hero {
-  min-height: 78vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 50px 20px;
-
-  background:
-    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.78)),
-    url("vehicle-1.png") center/cover no-repeat;
-}
-
-.hero-content {
-  max-width: 900px;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+                url("vehicle-1.png") center/cover;
 }
 
 .hero h1 {
-  font-size: 50px;
-  color: #f5c400;
-  margin-bottom: 12px;
-  text-transform: uppercase;
+    color: #d4af37;
+    font-size: 36px;
+    margin-bottom: 12px;
 }
 
 .hero h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
+    font-size: 21px;
+    margin-bottom: 12px;
 }
 
 .hero p {
-  font-size: 19px;
-  margin-bottom: 8px;
+    color: #ddd;
+    margin-bottom: 25px;
 }
 
-.buttons {
-  margin-top: 25px;
-}
-
-.button {
-  display: inline-block;
-  background: #f5c400;
-  color: #000;
-  padding: 14px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 5px;
-  transition: .2s;
-}
-
-.button:hover {
-  background: #fff;
-  transform: translateY(-2px);
-}
-
-.button.dark {
-  background: #222;
-  color: #fff;
-  border: 1px solid #f5c400;
-}
-
-section {
-  padding: 65px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-section h2 {
-  text-align: center;
-  color: #f5c400;
-  font-size: 32px;
-  margin-bottom: 35px;
-}
-
-.intro {
-  text-align: center;
-  max-width: 850px;
-  margin: auto;
-  font-size: 18px;
-}
-
-.about-box {
-  background: #1c1c1c;
-  border-radius: 15px;
-  padding: 35px;
-  border: 1px solid #333;
-}
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.service {
-  background: #1c1c1c;
-  padding: 28px 20px;
-  border-radius: 12px;
-  text-align: center;
-  border: 1px solid #333;
-}
-
-.service h3 {
-  color: #f5c400;
-  margin-bottom: 12px;
-  font-size: 21px;
-}
-
-.reasons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.reason {
-  background: #1c1c1c;
-  padding: 25px;
-  border-radius: 12px;
-  border-left: 4px solid #f5c400;
-}
-
-.reason h3 {
-  margin-bottom: 8px;
-  color: #f5c400;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.step {
-  text-align: center;
-  padding: 25px;
-  background: #1c1c1c;
-  border-radius: 12px;
-}
-
-.step-number {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: #f5c400;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.areas {
-  text-align: center;
-  background: #181818;
-  border-radius: 15px;
-  padding: 35px;
-}
-
-.area-list {
-  margin-top: 20px;
-  font-size: 18px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid #333;
-  background: #222;
-}
-
-.booking {
-  background:
-    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
-    url("advertisement.png") center/cover no-repeat;
-
-  text-align: center;
-  border-radius: 15px;
-  padding: 55px 25px;
-}
-
-.booking h2 {
-  margin-bottom: 15px;
-}
-
-.contact {
-  text-align: center;
-  background: #181818;
-  border-radius: 15px;
-  padding: 40px 20px;
-}
-
-.contact p {
-  margin: 9px 0;
-  font-size: 18px;
-}
-
-footer {
-  text-align: center;
-  background: #000;
-  padding: 30px 15px;
-  margin-top: 30px;
-  border-top: 2px solid #f5c400;
-}
-
-footer p {
-  margin: 5px;
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    margin: 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: #25D366;
-  color: white;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 28px;
-  font-weight: bold;
-  box-shadow: 0 4px 14px rgba(0,0,0,.5);
-  z-index: 1000;
+    background: #25d366;
+    color: #fff;
+}
+
+.call {
+    background: #d4af37;
+    color: #000;
+}
+
+section {
+    padding: 45px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+section p {
+    color: #ddd;
+    text-align: center;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.steps {
+    margin-top: 25px;
+}
+
+.step {
+    background: #111;
+    border-left: 4px solid #d4af37;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+
+.step strong {
+    color: #d4af37;
+}
+
+.contact-box {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.contact-box p {
+    margin: 10px 0;
+}
+
+.contact-box a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+footer {
+    background: #000;
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 30px 15px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #d4af37;
 }
 
 @media (max-width: 600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
 
-  header {
-    position: relative;
-  }
+    .hero h2 {
+        font-size: 18px;
+    }
 
-  .hero {
-    min-height: 72vh;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .hero h2 {
-    font-size: 21px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  section {
-    padding: 50px 16px;
-  }
-
-  section h2 {
-    font-size: 28px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 4px 5px;
-  }
-
-  .gallery img {
-    height: 220px;
-  }
+    nav a {
+        display: inline-block;
+        margin: 4px;
+    }
 }
 </style>
 </head>
@@ -339,368 +219,267 @@ footer p {
 <body>
 
 <header>
+    <img src="logo.png" alt="Private Drive Expo Logo">
+</header>
 
-  <img src="logo.png" alt="Private Drive Expo Logo">
-
-  <nav>
+<nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#why-us">Why Us</a>
+    <a href="#booking">Booking</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
-  </nav>
-
-</header>
-
+</nav>
 
 <section class="hero" id="home">
+    <h1>PRIVATE DRIVE EXPO</h1>
+    <h2>Professional Private-Hire & Transport Services</h2>
+    <p>Your Journey. Our Priority.</p>
 
-  <div class="hero-content">
+    <a class="btn whatsapp"
+       href="https://wa.me/27723850359"
+       target="_blank">
+       WhatsApp Us
+    </a>
 
-    <h1>Private Drive Expo</h1>
-
-    <h2>Professional Private Transport</h2>
-
-    <p>Reliable • Comfortable • Professional</p>
-
-    <p>South Africa</p>
-
-    <div class="buttons">
-
-      <a class="button" href="#contact">
-        Book a Ride
-      </a>
-
-      <a class="button dark" href="#services">
-        View Services
-      </a>
-
-    </div>
-
-  </div>
-
+    <a class="btn call"
+       href="tel:+27723850359">
+       Call 072 385 0359
+    </a>
 </section>
-
 
 <section id="about">
-
-  <h2>About Private Drive Expo</h2>
-
-  <div class="about-box">
-
-    <p class="intro">
-      Private Drive Expo is a professional private transport service
-      focused on providing reliable, comfortable and convenient
-      transportation for individuals, families and businesses.
+    <h2>About Private Drive Expo</h2>
+    <p>
+        Private Drive Expo is a South African private-hire and transport
+        service focused on providing professional, convenient and reliable
+        transport solutions for individuals, families, businesses and special
+        occasions.
     </p>
-
-    <br>
-
-    <p class="intro">
-      Whether you need everyday private transport, airport transfers,
-      business transportation or transport for a special occasion,
-      our goal is to make your journey safe, convenient and stress-free.
-    </p>
-
-  </div>
-
 </section>
-
 
 <section id="services">
+    <h2>Our Services</h2>
 
-  <h2>Our Services</h2>
+    <div class="services">
 
-  <div class="services">
+        <div class="card">
+            <img src="advertisement.png"
+                 alt="Private Drive Expo Advertisement"
+                 style="width:100%;border-radius:8px;margin-bottom:15px;">
+            <h3>Private Transport</h3>
+            <p>
+                Comfortable and convenient private-hire transport for your
+                personal travel needs.
+            </p>
+        </div>
 
-    <div class="service">
-      <h3>🚗 Private Rides</h3>
-      <p>
-        Convenient private transportation for your everyday
-        travel needs.
-      </p>
+        <div class="card">
+            <img src="vehicle-1.png"
+                 alt="Private Drive Expo Vehicle"
+                 style="width:100%;border-radius:8px;margin-bottom:15px;">
+            <h3>Private-Hire Services</h3>
+            <p>
+                Reliable transport solutions arranged according to your
+                requirements and schedule.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="business-card.png"
+                 alt="Private Drive Expo Business Card"
+                 style="width:100%;border-radius:8px;margin-bottom:15px;">
+            <h3>Business Transport</h3>
+            <p>
+                Professional transport solutions for business-related
+                journeys and appointments.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="sticker.png"
+                 alt="Private Drive Expo Vehicle Branding"
+                 style="width:100%;border-radius:8px;margin-bottom:15px;">
+            <h3>Special Transport</h3>
+            <p>
+                Transport assistance for special trips, events and other
+                private-hire requirements.
+            </p>
+        </div>
+
     </div>
-
-    <div class="service">
-      <h3>✈️ Airport Transfers</h3>
-      <p>
-        Reliable transportation to and from airports,
-        with a focus on convenience and punctuality.
-      </p>
-    </div>
-
-    <div class="service">
-      <h3>💼 Business Transport</h3>
-      <p>
-        Professional transport solutions for business
-        meetings, appointments and work-related travel.
-      </p>
-    </div>
-
-    <div class="service">
-      <h3>🎉 Special Events</h3>
-      <p>
-        Transport for functions, celebrations, events
-        and other special occasions.
-      </p>
-    </div>
-
-    <div class="service">
-      <h3>👨‍👩‍👧 Family Transport</h3>
-      <p>
-        Comfortable private transportation for families
-        and groups.
-      </p>
-    </div>
-
-    <div class="service">
-      <h3>📅 Pre-Booked Trips</h3>
-      <p>
-        Arrange your journey in advance for greater
-        convenience and peace of mind.
-      </p>
-    </div>
-
-  </div>
-
 </section>
-
 
 <section id="why-us">
+    <h2>Why Choose Us?</h2>
 
-  <h2>Why Choose Private Drive Expo?</h2>
+    <div class="services">
 
-  <div class="reasons">
+        <div class="card">
+            <h3>Professional</h3>
+            <p>
+                We aim to provide a professional and respectful transport
+                experience.
+            </p>
+        </div>
 
-    <div class="reason">
-      <h3>Reliability</h3>
-      <p>
-        We aim to provide dependable transport and
-        professional service.
-      </p>
+        <div class="card">
+            <h3>Reliable</h3>
+            <p>
+                Your journey matters. We focus on dependable service and
+                communication.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Convenient</h3>
+            <p>
+                Easy booking through WhatsApp or telephone.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>South Africa</h3>
+            <p>
+                Proudly providing private transport services in South Africa.
+            </p>
+        </div>
+
     </div>
-
-    <div class="reason">
-      <h3>Comfort</h3>
-      <p>
-        Enjoy a comfortable private transport experience
-        suited to your journey.
-      </p>
-    </div>
-
-    <div class="reason">
-      <h3>Professional Service</h3>
-      <p>
-        We treat every customer with respect and
-        professionalism.
-      </p>
-    </div>
-
-    <div class="reason">
-      <h3>Convenience</h3>
-      <p>
-        Book your transport and let us help make your
-        journey easier.
-      </p>
-    </div>
-
-  </div>
-
 </section>
 
+<section id="booking">
+    <h2>How To Book</h2>
 
-<section>
+    <div class="steps">
 
-  <h2>How Booking Works</h2>
+        <div class="step">
+            <strong>1. Contact Us</strong><br>
+            Send us a WhatsApp message or give us a call.
+        </div>
 
-  <div class="steps">
+        <div class="step">
+            <strong>2. Share Your Requirements</strong><br>
+            Tell us your transport requirements, date and relevant trip
+            details.
+        </div>
 
-    <div class="step">
-      <div class="step-number">1</div>
-      <h3>Contact Us</h3>
-      <p>
-        Send us a WhatsApp message or contact us
-        to enquire about your trip.
-      </p>
+        <div class="step">
+            <strong>3. Confirm Your Booking</strong><br>
+            We will communicate with you regarding your booking arrangements.
+        </div>
+
+        <div class="step">
+            <strong>4. Enjoy Your Journey</strong><br>
+            Travel with Private Drive Expo.
+        </div>
+
     </div>
-
-    <div class="step">
-      <div class="step-number">2</div>
-      <h3>Tell Us Your Trip</h3>
-      <p>
-        Provide your pickup location, destination,
-        date and preferred time.
-      </p>
-    </div>
-
-    <div class="step">
-      <div class="step-number">3</div>
-      <h3>Confirm</h3>
-      <p>
-        Confirm the trip details and arrange your
-        transportation with us.
-      </p>
-    </div>
-
-    <div class="step">
-      <div class="step-number">4</div>
-      <h3>Enjoy Your Ride</h3>
-      <p>
-        Sit back and enjoy your private transport
-        experience.
-      </p>
-    </div>
-
-  </div>
-
 </section>
 
-
-<section>
-
-  <div class="areas">
-
+<section id="areas">
     <h2>Areas We Serve</h2>
-
     <p>
-      Private Drive Expo provides private transport
-      services in South Africa.
+        Private Drive Expo provides private transport services in
+        <strong>South Africa</strong>.
+    </p>
+</section>
+
+<section id="gallery">
+    <h2>Our Gallery</h2>
+
+    <div class="gallery">
+        <img src="logo.png" alt="Private Drive Expo Logo">
+        <img src="advertisement.png" alt="Private Drive Expo Advertisement">
+        <img src="sticker.png" alt="Private Drive Expo Sticker">
+        <img src="vehicle-1.png" alt="Private Drive Expo Vehicle">
+        <img src="business-card.png" alt="Private Drive Expo Business Card">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Private Drive Expo</h2>
+
+    <div class="contact-box">
+
+        <p>
+            <strong>Company:</strong><br>
+            Private Drive Expo
+        </p>
+
+        <p>
+            <strong>Service:</strong><br>
+            Private Transport
+        </p>
+
+        <p>
+            <strong>Location:</strong><br>
+            South Africa
+        </p>
+
+        <p>
+            <strong>Phone:</strong><br>
+            <a href="tel:+27723850359">072 385 0359</a>
+        </p>
+
+        <p>
+            <strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/27723850359" target="_blank">
+                WhatsApp Private Drive Expo
+            </a>
+        </p>
+
+        <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:privatedriveexpo@gmail.com">
+                privatedriveexpo@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <strong>Booking:</strong><br>
+            Contact us by WhatsApp, phone or email.
+        </p>
+
+        <br>
+
+        <a class="btn whatsapp"
+           href="https://wa.me/27723850359"
+           target="_blank">
+           Book via WhatsApp
+        </a>
+
+        <a class="btn call"
+           href="mailto:privatedriveexpo@gmail.com">
+           Email Us
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        <strong>PRIVATE DRIVE EXPO</strong>
     </p>
 
-    <p class="area-list">
-      🇿🇦 South Africa
+    <p>
+        Professional Private-Hire & Transport Services
+    </p>
+
+    <p>
+        South Africa
+    </p>
+
+    <p>
+        072 385 0359 |
+        privatedriveexpo@gmail.com
     </p>
 
     <p style="margin-top:15px;">
-      Contact us to confirm availability for your
-      specific destination.
+        © 2026 Private Drive Expo. All Rights Reserved.
     </p>
-
-  </div>
-
-</section>
-
-
-<section id="gallery">
-
-  <h2>Private Drive Expo Gallery</h2>
-
-  <div class="gallery">
-
-    <img src="advertisement.png"
-         alt="Private Drive Expo Advertisement">
-
-    <img src="business-card.png"
-         alt="Private Drive Expo Business Card">
-
-    <img src="logo.png"
-         alt="Private Drive Expo Logo">
-
-    <img src="sticker.png"
-         alt="Private Drive Expo Vehicle Sticker">
-
-    <img src="vehicle-1.png"
-         alt="Private Drive Expo Vehicle">
-
-  </div>
-
-</section>
-
-
-<section>
-
-  <div class="booking">
-
-    <h2>Need a Private Ride?</h2>
-
-    <p>
-      Get in touch with Private Drive Expo
-      to discuss your transport requirements.
-    </p>
-
-    <div class="buttons">
-
-      <a class="button"
-         href="https://wa.me/27700000000">
-        WhatsApp Us
-      </a>
-
-      <a class="button dark"
-         href="#contact">
-        Contact Details
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="contact">
-
-  <div class="contact">
-
-    <h2>Contact Private Drive Expo</h2>
-
-    <p>
-      <strong>📍 Location:</strong>
-      South Africa
-    </p>
-
-    <p>
-      <strong>🚗 Service:</strong>
-      Private Transport
-    </p>
-
-    <p>
-      <strong>💬 Booking:</strong>
-      Contact us via WhatsApp
-    </p>
-
-    <div class="buttons">
-
-      <a class="button"
-         href="https://wa.me/27700000000">
-        WhatsApp Private Drive Expo
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<footer>
-
-  <p>
-    <strong>Private Drive Expo</strong>
-  </p>
-
-  <p>
-    Professional Private Transport
-  </p>
-
-  <p>
-    South Africa
-  </p>
-
-  <p>
-    © 2026 Private Drive Expo. All Rights Reserved.
-  </p>
-
 </footer>
-
-
-<a class="whatsapp"
-   href="https://wa.me/27700000000"
-   aria-label="WhatsApp Private Drive Expo">
-
-  ☎
-
-</a>
 
 </body>
 </html>
