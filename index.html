@@ -3,14 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Private Drive Expo | Soshanguve</title>
-<meta name="description" content="Private Drive Expo - Professional private transport and vehicle services in Soshanguve.">
+
+<title>Private Drive Expo | Private Transport Soshanguve</title>
+
+<meta name="description" content="Private Drive Expo provides professional, reliable and comfortable private transport services in Soshanguve and surrounding areas.">
 
 <style>
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,54 +29,72 @@ body {
 header {
   background: #000;
   text-align: center;
-  padding: 20px;
+  padding: 18px 15px;
   border-bottom: 2px solid #f5c400;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 header img {
-  width: 150px;
-  max-width: 80%;
+  width: 145px;
+  max-width: 70%;
 }
 
 nav {
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 8px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 nav a:hover {
   color: #f5c400;
 }
 
+/* HERO */
+
 .hero {
-  min-height: 75vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
-              url("vehicle-1.png") center/cover no-repeat;
+  padding: 50px 20px;
+
+  background:
+    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.78)),
+    url("vehicle-1.png") center/cover no-repeat;
 }
 
 .hero-content {
-  max-width: 850px;
+  max-width: 900px;
 }
 
 .hero h1 {
-  font-size: 46px;
+  font-size: 50px;
   color: #f5c400;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  font-size: 26px;
   margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 20px;
-  margin-bottom: 25px;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.buttons {
+  margin-top: 25px;
 }
 
 .button {
@@ -82,14 +106,24 @@ nav a:hover {
   text-decoration: none;
   font-weight: bold;
   margin: 5px;
+  transition: .2s;
 }
 
 .button:hover {
   background: #fff;
+  transform: translateY(-2px);
 }
 
+.button.dark {
+  background: #222;
+  color: #fff;
+  border: 1px solid #f5c400;
+}
+
+/* GENERAL */
+
 section {
-  padding: 60px 20px;
+  padding: 65px 20px;
   max-width: 1100px;
   margin: auto;
 }
@@ -98,13 +132,26 @@ section h2 {
   text-align: center;
   color: #f5c400;
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
-.about {
+.intro {
   text-align: center;
+  max-width: 850px;
+  margin: auto;
   font-size: 18px;
 }
+
+/* ABOUT */
+
+.about-box {
+  background: #1c1c1c;
+  border-radius: 15px;
+  padding: 35px;
+  border: 1px solid #333;
+}
+
+/* SERVICES */
 
 .services {
   display: grid;
@@ -113,8 +160,8 @@ section h2 {
 }
 
 .service {
-  background: #1d1d1d;
-  padding: 25px;
+  background: #1c1c1c;
+  padding: 28px 20px;
   border-radius: 12px;
   text-align: center;
   border: 1px solid #333;
@@ -122,12 +169,78 @@ section h2 {
 
 .service h3 {
   color: #f5c400;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 21px;
 }
+
+/* WHY US */
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.reason {
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #f5c400;
+}
+
+.reason h3 {
+  margin-bottom: 8px;
+  color: #f5c400;
+}
+
+/* HOW IT WORKS */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.step {
+  text-align: center;
+  padding: 25px;
+  background: #1c1c1c;
+  border-radius: 12px;
+}
+
+.step-number {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f5c400;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* AREAS */
+
+.areas {
+  text-align: center;
+  background: #181818;
+  border-radius: 15px;
+  padding: 35px;
+}
+
+.area-list {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* GALLERY */
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 20px;
 }
 
@@ -137,26 +250,54 @@ section h2 {
   object-fit: cover;
   border-radius: 12px;
   border: 2px solid #333;
+  background: #222;
 }
+
+/* BOOKING */
+
+.booking {
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+    url("advertisement.png") center/cover no-repeat;
+
+  text-align: center;
+  border-radius: 15px;
+  padding: 55px 25px;
+}
+
+.booking h2 {
+  margin-bottom: 15px;
+}
+
+/* CONTACT */
 
 .contact {
   text-align: center;
   background: #181818;
   border-radius: 15px;
+  padding: 40px 20px;
 }
 
 .contact p {
-  margin: 10px 0;
+  margin: 9px 0;
   font-size: 18px;
 }
+
+/* FOOTER */
 
 footer {
   text-align: center;
   background: #000;
-  padding: 25px 15px;
+  padding: 30px 15px;
   margin-top: 30px;
   border-top: 2px solid #f5c400;
 }
+
+footer p {
+  margin: 5px;
+}
+
+/* WHATSAPP */
 
 .whatsapp {
   position: fixed;
@@ -164,31 +305,58 @@ footer {
   bottom: 20px;
   background: #25D366;
   color: white;
-  width: 60px;
-  height: 60px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 27px;
+  font-size: 28px;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  box-shadow: 0 4px 14px rgba(0,0,0,.5);
   z-index: 1000;
 }
 
+/* MOBILE */
+
 @media (max-width: 600px) {
+
+  header {
+    position: relative;
+  }
+
+  .hero {
+    min-height: 72vh;
+  }
+
   .hero h1 {
     font-size: 34px;
   }
 
+  .hero h2 {
+    font-size: 21px;
+  }
+
   .hero p {
-    font-size: 17px;
+    font-size: 16px;
+  }
+
+  section {
+    padding: 50px 16px;
+  }
+
+  section h2 {
+    font-size: 28px;
   }
 
   nav a {
     display: inline-block;
-    margin: 5px;
+    margin: 4px 5px;
+  }
+
+  .gallery img {
+    height: 220px;
   }
 }
 </style>
@@ -196,108 +364,411 @@ footer {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
   <img src="logo.png" alt="Private Drive Expo Logo">
 
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>PRIVATE DRIVE EXPO</h1>
-    <p>Professional Private Transport & Vehicle Services</p>
-    <p>Soshanguve and surrounding areas</p>
 
-    <a class="button" href="#contact">Book a Ride</a>
-    <a class="button" href="#services">Our Services</a>
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>Private Drive Expo</h1>
+
+    <h2>Professional Private Transport</h2>
+
+    <p>Reliable • Comfortable • Professional</p>
+
+    <p>Soshanguve & Surrounding Areas</p>
+
+    <div class="buttons">
+
+      <a class="button" href="#contact">
+        Book a Ride
+      </a>
+
+      <a class="button dark" href="#services">
+        View Services
+      </a>
+
+    </div>
+
   </div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
+
   <h2>About Private Drive Expo</h2>
 
-  <div class="about">
-    <p>
-      Private Drive Expo provides reliable, professional and convenient
-      private transport services for individuals, families and businesses.
-      We are committed to safe, comfortable and dependable transportation.
+  <div class="about-box">
+
+    <p class="intro">
+      Private Drive Expo is a professional private transport service
+      focused on providing reliable, comfortable and convenient
+      transportation for individuals, families and businesses.
     </p>
+
+    <br>
+
+    <p class="intro">
+      Whether you need everyday private transport, airport transfers,
+      business transportation or transport for a special occasion,
+      our goal is to make your journey safe, convenient and stress-free.
+    </p>
+
   </div>
+
 </section>
 
+
+<!-- SERVICES -->
+
 <section id="services">
+
   <h2>Our Services</h2>
 
   <div class="services">
 
     <div class="service">
-      <h3>Private Rides</h3>
-      <p>Comfortable private transport for your everyday travel needs.</p>
+      <h3>🚗 Private Rides</h3>
+      <p>
+        Convenient private transportation for your everyday
+        travel needs.
+      </p>
     </div>
 
     <div class="service">
-      <h3>Airport Transfers</h3>
-      <p>Reliable transport to and from airports.</p>
+      <h3>✈️ Airport Transfers</h3>
+      <p>
+        Reliable transportation to and from airports,
+        with a focus on convenience and punctuality.
+      </p>
     </div>
 
     <div class="service">
-      <h3>Business Transport</h3>
-      <p>Professional transportation solutions for business clients.</p>
+      <h3>💼 Business Transport</h3>
+      <p>
+        Professional transport solutions for business
+        meetings, appointments and work-related travel.
+      </p>
     </div>
 
     <div class="service">
-      <h3>Special Events</h3>
-      <p>Transport services for events, functions and special occasions.</p>
+      <h3>🎉 Special Events</h3>
+      <p>
+        Transport for functions, celebrations, events
+        and other special occasions.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>👨‍👩‍👧 Family Transport</h3>
+      <p>
+        Comfortable private transportation for families
+        and groups.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>📅 Pre-Booked Trips</h3>
+      <p>
+        Arrange your journey in advance for greater
+        convenience and peace of mind.
+      </p>
     </div>
 
   </div>
+
 </section>
 
+
+<!-- WHY US -->
+
+<section id="why-us">
+
+  <h2>Why Choose Private Drive Expo?</h2>
+
+  <div class="reasons">
+
+    <div class="reason">
+      <h3>Reliability</h3>
+      <p>
+        We aim to provide dependable transport and
+        professional service.
+      </p>
+    </div>
+
+    <div class="reason">
+      <h3>Comfort</h3>
+      <p>
+        Enjoy a comfortable private transport experience
+        suited to your journey.
+      </p>
+    </div>
+
+    <div class="reason">
+      <h3>Professional Service</h3>
+      <p>
+        We treat every customer with respect and
+        professionalism.
+      </p>
+    </div>
+
+    <div class="reason">
+      <h3>Convenience</h3>
+      <p>
+        Book your transport and let us help make your
+        journey easier.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section>
+
+  <h2>How Booking Works</h2>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="step-number">1</div>
+
+      <h3>Contact Us</h3>
+
+      <p>
+        Send us a WhatsApp message or contact us
+        to enquire about your trip.
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">2</div>
+
+      <h3>Tell Us Your Trip</h3>
+
+      <p>
+        Provide your pickup location, destination,
+        date and preferred time.
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">3</div>
+
+      <h3>Confirm</h3>
+
+      <p>
+        Confirm the trip details and arrange your
+        transportation with us.
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">4</div>
+
+      <h3>Enjoy Your Ride</h3>
+
+      <p>
+        Sit back and enjoy your private transport
+        experience.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- AREAS -->
+
+<section>
+
+  <div class="areas">
+
+    <h2>Areas We Serve</h2>
+
+    <p>
+      Based in <strong>Soshanguve, Gauteng</strong>,
+      Private Drive Expo provides transport in Soshanguve
+      and surrounding areas.
+    </p>
+
+    <p class="area-list">
+      📍 Soshanguve &nbsp; • &nbsp;
+      📍 Pretoria &nbsp; • &nbsp;
+      📍 Surrounding Gauteng Areas
+    </p>
+
+    <p style="margin-top:15px;">
+      Contact us to confirm availability for your
+      specific destination.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
 <section id="gallery">
-  <h2>Our Work</h2>
+
+  <h2>Private Drive Expo Gallery</h2>
 
   <div class="gallery">
 
-    <img src="advertisement.png" alt="Private Drive Expo Advertisement">
+    <img src="advertisement.png"
+         alt="Private Drive Expo Advertisement">
 
-    <img src="business-card.png" alt="Private Drive Expo Business Card">
+    <img src="business-card.png"
+         alt="Private Drive Expo Business Card">
 
-    <img src="logo.png" alt="Private Drive Expo Logo">
+    <img src="logo.png"
+         alt="Private Drive Expo Logo">
 
-    <img src="sticker.png" alt="Private Drive Expo Sticker">
+    <img src="sticker.png"
+         alt="Private Drive Expo Vehicle Sticker">
 
-    <img src="vehicle-1.png" alt="Private Drive Expo Vehicle">
+    <img src="vehicle-1.png"
+         alt="Private Drive Expo Vehicle">
 
   </div>
+
 </section>
+
+
+<!-- BOOKING -->
+
+<section>
+
+  <div class="booking">
+
+    <h2>Need a Private Ride?</h2>
+
+    <p>
+      Get in touch with Private Drive Expo
+      to discuss your transport requirements.
+    </p>
+
+    <div class="buttons">
+
+      <a class="button"
+         href="https://wa.me/27700000000">
+        WhatsApp Us
+      </a>
+
+      <a class="button dark"
+         href="#contact">
+        Contact Details
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
+
   <div class="contact">
+
     <h2>Contact Private Drive Expo</h2>
 
-    <p><strong>Location:</strong> Soshanguve, Gauteng</p>
+    <p>
+      <strong>📍 Location:</strong>
+      Soshanguve, Gauteng
+    </p>
 
-    <p>Contact us today to arrange your private transport.</p>
+    <p>
+      <strong>🚗 Service:</strong>
+      Private Transport
+    </p>
 
-    <a class="button" href="https://wa.me/27700000000">
-      WhatsApp Us
-    </a>
+    <p>
+      <strong>💬 Booking:</strong>
+      Contact us via WhatsApp
+    </p>
+
+    <div class="buttons">
+
+      <a class="button"
+         href="https://wa.me/27700000000">
+        WhatsApp Private Drive Expo
+      </a>
+
+    </div>
+
   </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <p>© 2026 Private Drive Expo. All Rights Reserved.</p>
-  <p>Soshanguve, Gauteng</p>
+
+  <p>
+    <strong>Private Drive Expo</strong>
+  </p>
+
+  <p>
+    Professional Private Transport
+  </p>
+
+  <p>
+    Soshanguve, Gauteng
+  </p>
+
+  <p>
+    © 2026 Private Drive Expo. All Rights Reserved.
+  </p>
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/27700000000" aria-label="WhatsApp">
+
+<!-- FLOATING WHATSAPP -->
+
+<a class="whatsapp"
+   href="https://wa.me/27700000000"
+   aria-label="WhatsApp Private Drive Expo">
+
   ☎
+
 </a>
 
 </body>
