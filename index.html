@@ -1,330 +1,556 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-site-verification" content="UHTSVjQVR0Rr_VO2YVdFOlXYkuvfsFrFV1xu4xwNWy4" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Private Drive Expo — E-hailing App</title>
+
+<title>Private Drive Expo | Private Transport South Africa</title>
+
+<meta name="description" content="Private Drive Expo provides professional private-hire and transport services in South Africa. Contact us for bookings and reliable transport solutions.">
+
 <style>
-:root{--bg:#090b0c;--panel:#141719;--line:#2a3032;--text:#f5f7f7;--muted:#a6b0b2;--gold:#f4c542;--green:#6de3a0;--red:#ff7777}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Arial,sans-serif}
-.app{max-width:850px;margin:auto;padding:0 16px}
-header{padding:18px 0;border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:5}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:48px;height:48px;border-radius:12px;background:var(--gold);color:#111;display:grid;place-items:center;font-weight:900}
-h1{font-size:18px;margin:0}
-.brand p{color:var(--gold);margin:3px 0;font-weight:bold}
-.reg,.small{font-size:12px;color:var(--muted)}
-.tabs{display:flex;gap:7px;overflow-x:auto;margin-top:14px}
-button{cursor:pointer;font:inherit;font-weight:bold;border:1px solid var(--line);border-radius:10px;padding:11px;background:#202426;color:white}
-.tab{white-space:nowrap}
-.tab.active,.primary{background:var(--gold);color:#111;border-color:var(--gold)}
-.screen{display:none;padding:18px 0}
-.screen.active{display:block}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:17px;margin-bottom:13px}
-.hero{background:linear-gradient(135deg,#252a2b,#111415)}
-.eyebrow{color:var(--gold);font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:1px}
-h2{font-size:29px;line-height:1.15}
-h3{font-size:16px;margin-top:0}
-p{color:var(--muted)}
-label{display:block;margin:14px 0 6px;font-size:12px;font-weight:bold}
-input,select{width:100%;padding:13px;background:#0d1011;border:1px solid #343b3d;color:white;border-radius:10px;font:inherit}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.ride-types{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.ride{font-size:12px;padding:12px 4px}
-.ride.active{border-color:var(--gold);color:var(--gold)}
-.fare,.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
-.fare strong{font-size:24px}
-.stepper{display:flex;align-items:center;gap:10px}
-.stepper button{font-size:23px;width:42px}
-.stepper output{font-size:23px;font-weight:bold}
-.badge{background:#173b29;color:var(--green);padding:5px 8px;border-radius:7px;font-size:11px;font-weight:bold}
-.block{width:100%;margin-top:10px}
-.secondary{background:transparent}
-.danger{color:var(--red)}
-.status{display:none;padding:12px;margin-top:12px;background:#11241a;border:1px solid #385c48;border-radius:10px;overflow-wrap:anywhere}
-.map{height:150px;background:linear-gradient(135deg,#263630,#11191a);border-radius:12px;display:flex;align-items:center;justify-content:space-around;margin:14px 0}
-.pin{background:var(--gold);color:#111;padding:8px;border-radius:9px;font-weight:bold}
-.metric{padding:13px;background:#101314;border:1px solid var(--line);border-radius:12px}
-.metric b{display:block;font-size:22px}
-.metric small{color:var(--muted)}
-.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
-.notice{padding:12px;background:#211f17;border-left:3px solid var(--gold);font-size:12px;color:#ddd;margin-top:12px}
-footer{text-align:center;color:#888;font-size:11px;padding:22px}
-footer b{color:var(--gold)}
-@media(min-width:620px){.admin-grid{grid-template-columns:repeat(4,1fr)}}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #c9a227;
+}
+
+header img {
+    max-width: 180px;
+    width: 70%;
+    height: auto;
+}
+
+nav {
+    background: #111;
+    padding: 12px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 7px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+                url("vehicle-1.png") center/cover;
+}
+
+.hero h1 {
+    color: #d4af37;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    margin: 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp {
+    background: #25d366;
+    color: #fff;
+}
+
+.call {
+    background: #d4af37;
+    color: #000;
+}
+
+section {
+    padding: 45px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+section p {
+    color: #ddd;
+    text-align: center;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.steps {
+    margin-top: 25px;
+}
+
+.step {
+    background: #111;
+    border-left: 4px solid #d4af37;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+
+.step strong {
+    color: #d4af37;
+}
+
+.contact-box {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.contact-box p {
+    margin: 10px 0;
+}
+
+.contact-box a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+/* Social media icons */
+.social-icons {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 6px;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    border: 1px solid #444;
+}
+
+.social-icons a:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+footer {
+    background: #000;
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 30px 15px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #d4af37;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 4px;
+    }
+}
 </style>
 </head>
+
 <body>
-<div class="app">
+
 <header>
-<div class="brand">
-<div class="logo">PDE</div>
-<div><h1>Private Drive Expo</h1><p>Your Journey. Our Safety</p></div>
-</div>
-<div class="reg">Company registration: [Add official registration number]</div>
-<nav class="tabs">
-<button class="tab active" data-screen="passenger">Passenger</button>
-<button class="tab" data-screen="driver">Driver</button>
-<button class="tab" data-screen="trips">My Trips</button>
-<button class="tab" data-screen="safety">Safety</button>
-<button class="tab" data-screen="admin">Company Admin</button>
-</nav>
+    <img src="logo.png" alt="Private Drive Expo Logo">
 </header>
 
-<main>
-<section id="passenger" class="screen active">
-<div class="card hero">
-<div class="eyebrow">South African e-hailing</div>
-<h2>Your ride, your way.</h2>
-<p>Request a trip, negotiate your fare and confirm your price before travelling.</p>
-</div>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#booking">Booking</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-<div class="card">
-<h3>Book your ride</h3>
-<label for="pickup">Pickup location</label>
-<input id="pickup" placeholder="Enter pickup address" value="My current location">
-<button class="secondary block" onclick="useLocation()">Use current-location placeholder</button>
+<section class="hero" id="home">
+    <h1>PRIVATE DRIVE EXPO</h1>
+    <h2>Professional Private-Hire & Transport Services</h2>
+    <p>Your Journey. Our Priority.</p>
 
-<label for="destination">Destination</label>
-<input id="destination" placeholder="Where are you going?">
+    <a class="btn whatsapp"
+       href="https://wa.me/27723850359"
+       target="_blank">
+       WhatsApp Us
+    </a>
 
-<label>Choose ride type</label>
-<div class="ride-types">
-<button class="ride active" data-base="95" onclick="chooseRide(this)">Standard<br><b>Everyday</b></button>
-<button class="ride" data-base="120" onclick="chooseRide(this)">Comfort<br><b>Extra</b></button>
-<button class="ride" data-base="150" onclick="chooseRide(this)">XL<br><b>Group</b></button>
-</div>
-
-<label>Negotiable fare</label>
-<div class="fare">
-<div class="stepper">
-<button onclick="changeFare(-5)" aria-label="Decrease fare">−</button>
-<output id="fareAmount">R95</output>
-<button onclick="changeFare(5)" aria-label="Increase fare">+</button>
-</div>
-<span class="badge">Negotiable</span>
-</div>
-<p class="small">Passengers suggest a price. Drivers can accept or send a counter-offer.</p>
-
-<button class="primary block" onclick="requestRide()">Request Private Drive</button>
-<button class="secondary block" onclick="clearBooking()">Clear booking</button>
-<div id="rideStatus" class="status" aria-live="polite"></div>
-</div>
-
-<div class="card">
-<h3>Booking details</h3>
-<div class="row"><span>Booking reference</span><b id="bookingRef">Not booked</b></div>
-<div class="row"><span>Pickup</span><b id="summaryPickup">—</b></div>
-<div class="row"><span>Destination</span><b id="summaryDestination">—</b></div>
-<div class="row"><span>Agreed fare</span><b id="summaryFare">—</b></div>
-<div class="row"><span>Status</span><span class="badge" id="summaryStatus">Awaiting request</span></div>
-</div>
+    <a class="btn call"
+       href="tel:+27723850359">
+       Call 072 385 0359
+    </a>
 </section>
 
-<section id="driver" class="screen">
-<div class="card hero">
-<div class="eyebrow">Driver workspace</div>
-<h2>Ready when you are.</h2>
-<p>Manage your availability and respond to passenger requests.</p>
-</div>
-<div class="card">
-<div class="row"><b>Driver availability</b><button class="secondary" id="onlineBtn" onclick="toggleOnline()">Go offline</button></div>
-<p id="onlineText">Currently online — demo</p>
-<div class="row"><span>Driver profile</span><b>Private Drive Expo</b></div>
-<div class="row"><span>Trips today (sample)</span><b>7</b></div>
-<div class="row"><span>Earnings (sample)</span><b>R685</b></div>
-</div>
-<div class="card">
-<h3>Incoming ride request</h3>
-<div class="row"><span>Pickup</span><b id="driverPickup">Passenger location</b></div>
-<div class="row"><span>Destination</span><b id="driverDestination">Requested destination</b></div>
-<div class="row"><span>Passenger offer</span><b id="driverFare">R95</b></div>
-<label for="counterFare">Your counter-offer (R)</label>
-<input id="counterFare" type="number" min="1" value="100">
-<div class="grid" style="margin-top:12px">
-<button class="secondary" onclick="driverDecision('declined')">Decline</button>
-<button class="primary" onclick="driverDecision('accepted')">Accept fare</button>
-</div>
-<button class="secondary block" onclick="driverDecision('countered')">Send counter-offer</button>
-<div id="driverStatus" class="status" aria-live="polite"></div>
-</div>
+<section id="about">
+    <h2>About Private Drive Expo</h2>
+    <p>
+        Private Drive Expo is a South African private-hire and transport
+        service focused on providing professional, convenient and reliable
+        transport solutions for individuals, families, businesses and special
+        occasions.
+    </p>
 </section>
 
-<section id="trips" class="screen">
-<div class="card hero"><h2>My Trips</h2><p>Review your current demo booking and its status.</p></div>
-<div class="card"><h3>Trip history</h3><div id="tripList">No bookings yet. Request a ride first.</div></div>
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <img src="advertisement.png"
+                 alt="Private Drive Expo Advertisement"
+                 style="width:100%;border-radius:8px;margin-bottom:15px;">
+
+            <h3>Private Transport</h3>
+            <p>
+                Comfortable and convenient private-hire transport for your
+                personal travel needs.
+            </p>
+
+            <!-- Advertisement download -->
+            <a class="btn call"
+               href="advertisement.png"
+               download="Private-Drive-Expo-Advertisement.png">
+               Download Advertisement
+            </a>
+        </div>
+
+        <div class="card">
+            <img src="vehicle-1.png"
+                 alt="Private Drive Expo Vehicle"
+                 style="width:100%;border-radius:8px;margin-bottom:15px;">
+
+            <h3>Private-Hire Services</h3>
+            <p>
+                Reliable transport solutions arranged according to your
+                requirements and schedule.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="business-card.png"
+                 alt="Private Drive Expo Business Card"
+                 style="width:100%;border-radius:8px;margin-bottom:15px;">
+
+            <h3>Business Transport</h3>
+            <p>
+                Professional transport solutions for business-related
+                journeys and appointments.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="sticker.png"
+                 alt="Private Drive Expo Vehicle Branding"
+                 style="width:100%;border-radius:8px;margin-bottom:15px;">
+
+            <h3>Special Transport</h3>
+            <p>
+                Transport assistance for special trips, events and other
+                private-hire requirements.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<section id="safety" class="screen">
-<div class="card hero"><h2>Your safety matters.</h2><p>Trip information and safety demonstration tools.</p></div>
-<div class="card">
-<h3>Trip overview</h3>
-<div class="map"><span class="pin">PICKUP</span><span class="pin">DESTINATION</span></div>
-<button class="secondary block" onclick="shareTrip()">Show trip summary</button>
-<button class="danger block" onclick="safetyAlert()">Safety alert demonstration</button>
-<div id="safetyStatus" class="status" aria-live="polite"></div>
-<div class="notice">Demo only. This button does not call emergency services or transmit your location.</div>
-</div>
+<section id="why-us">
+    <h2>Why Choose Us?</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Professional</h3>
+            <p>
+                We aim to provide a professional and respectful transport
+                experience.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Reliable</h3>
+            <p>
+                Your journey matters. We focus on dependable service and
+                communication.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Convenient</h3>
+            <p>
+                Easy booking through WhatsApp, telephone or email.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>South Africa</h3>
+            <p>
+                Proudly providing private transport services in South Africa.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<section id="admin" class="screen">
-<div class="card hero">
-<div class="eyebrow">Company operations</div>
-<h2>Private Drive Expo Control</h2>
-<p>Administrative dashboard and compliance checklist.</p>
-</div>
-<div class="admin-grid">
-<div class="metric"><b>24</b><small>Drivers (sample)</small></div>
-<div class="metric"><b>8</b><small>Trips active (sample)</small></div>
-<div class="metric"><b>126</b><small>Trips today (sample)</small></div>
-<div class="metric"><b>R12.4k</b><small>Fares (sample)</small></div>
-</div>
-<div class="card" style="margin-top:13px">
-<h3>Company checklist</h3>
-<div class="row"><span>Company registration</span><span class="badge">Add details</span></div>
-<div class="row"><span>Driver verification</span><span class="badge">Required</span></div>
-<div class="row"><span>Vehicle documents</span><span class="badge">Required</span></div>
-<div class="row"><span>Operating licences</span><span class="badge">Review</span></div>
-<div class="row"><span>Privacy policy and terms</span><span class="badge">Prepare</span></div>
-<div class="row"><span>Payments and receipts</span><span class="badge">Demo only</span></div>
-<div class="notice">Sample dashboard figures are not live company data. A production app requires secure accounts, a backend, GPS and driver matching, payment integrations, notifications and applicable South African regulatory compliance.</div>
-</div>
+<section id="booking">
+    <h2>How To Book</h2>
+
+    <div class="steps">
+
+        <div class="step">
+            <strong>1. Contact Us</strong><br>
+            Send us a WhatsApp message, give us a call or email us at
+            <a href="mailto:privatedriveexpo@gmail.com">
+                privatedriveexpo@gmail.com
+            </a>.
+        </div>
+
+        <div class="step">
+            <strong>2. Share Your Requirements</strong><br>
+            Tell us your transport requirements, date and relevant trip
+            details.
+        </div>
+
+        <div class="step">
+            <strong>3. Confirm Your Booking</strong><br>
+            We will communicate with you regarding your booking arrangements.
+        </div>
+
+        <div class="step">
+            <strong>4. Enjoy Your Journey</strong><br>
+            Travel with Private Drive Expo.
+        </div>
+
+    </div>
 </section>
-</main>
 
-<footer>© <span id="year"></span> <b>Private Drive Expo</b><br>Your Journey. Our Safety</footer>
-</div>
+<section id="areas">
+    <h2>Areas We Serve</h2>
+    <p>
+        Private Drive Expo provides private transport services in
+        <strong>South Africa</strong>.
+    </p>
+</section>
 
-<script>
-let fare=95;
-let rideType="Standard";
-let booking=null;
-let online=true;
+<section id="gallery">
+    <h2>Our Gallery</h2>
 
-const $=id=>document.getElementById(id);
+    <div class="gallery">
+        <img src="logo.png" alt="Private Drive Expo Logo">
+        <img src="advertisement.png" alt="Private Drive Expo Advertisement">
+        <img src="sticker.png" alt="Private Drive Expo Sticker">
+        <img src="vehicle-1.png" alt="Private Drive Expo Vehicle">
+        <img src="business-card.png" alt="Private Drive Expo Business Card">
+    </div>
 
-document.querySelectorAll(".tab").forEach(tab=>{
-tab.addEventListener("click",()=>{
-document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t===tab));
-document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===tab.dataset.screen));
-});
-});
+    <div style="text-align:center;margin-top:20px;">
+        <a class="btn call"
+           href="advertisement.png"
+           download="Private-Drive-Expo-Advertisement.png">
+           Download Advertisement
+        </a>
+    </div>
+</section>
 
-$("year").textContent=new Date().getFullYear();
+<section id="contact">
+    <h2>Contact Private Drive Expo</h2>
 
-function chooseRide(button){
-document.querySelectorAll(".ride").forEach(r=>r.classList.toggle("active",r===button));
-rideType=button.textContent.trim().split("\n")[0];
-fare=Number(button.dataset.base);
-$("fareAmount").textContent="R"+fare;
-}
+    <div class="contact-box">
 
-function changeFare(amount){
-fare=Math.max(20,Math.min(2000,fare+amount));
-$("fareAmount").textContent="R"+fare;
-}
+        <p>
+            <strong>Company:</strong><br>
+            Private Drive Expo
+        </p>
 
-function useLocation(){
-$("pickup").value="Current location (demo)";
-}
+        <p>
+            <strong>Service:</strong><br>
+            Private Transport
+        </p>
 
-function requestRide(){
-const pickup=$("pickup").value.trim();
-const destination=$("destination").value.trim();
+        <p>
+            <strong>Location:</strong><br>
+            South Africa
+        </p>
 
-if(!pickup||!destination){
-$("rideStatus").style.display="block";
-$("rideStatus").textContent="Please enter both pickup and destination.";
-return;
-}
+        <p>
+            <strong>Phone:</strong><br>
+            <a href="tel:+27723850359">072 385 0359</a>
+        </p>
 
-booking={
-ref:"PDE-"+Math.random().toString(36).slice(2,8).toUpperCase(),
-pickup,
-destination,
-fare,
-rideType,
-status:"Requested — demo only",
-time:new Date().toLocaleString()
-};
+        <p>
+            <strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/27723850359" target="_blank">
+                WhatsApp Private Drive Expo
+            </a>
+        </p>
 
-$("bookingRef").textContent=booking.ref;
-$("summaryPickup").textContent=pickup;
-$("summaryDestination").textContent=destination;
-$("summaryFare").textContent="R"+fare;
-$("summaryStatus").textContent="Requested";
-$("driverPickup").textContent=pickup;
-$("driverDestination").textContent=destination;
-$("driverFare").textContent="R"+fare;
-$("counterFare").value=fare+5;
-$("rideStatus").style.display="block";
-$("rideStatus").textContent="Demo booking created. No real driver has been contacted.";
-renderTrip();
-}
+        <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:privatedriveexpo@gmail.com">
+                privatedriveexpo@gmail.com
+            </a>
+        </p>
 
-function clearBooking(){
-$("pickup").value="";
-$("destination").value="";
-$("rideStatus").style.display="none";
-}
+        <p>
+            <strong>Booking:</strong><br>
+            Contact us by WhatsApp, phone or email.
+        </p>
 
-function renderTrip(){
-if(!booking){
-$("tripList").textContent="No bookings yet.";
-return;
-}
-$("tripList").textContent=booking.ref+" | "+booking.pickup+" → "+booking.destination+" | R"+booking.fare+" | "+booking.status+" | "+booking.time;
-}
+        <br>
 
-function toggleOnline(){
-online=!online;
-$("onlineText").textContent=online?"Currently online — demo":"Currently offline — demo";
-$("onlineBtn").textContent=online?"Go offline":"Go online";
-}
+        <a class="btn whatsapp"
+           href="https://wa.me/27723850359"
+           target="_blank">
+           Book via WhatsApp
+        </a>
 
-function driverDecision(decision){
-let message;
-if(!booking){
-message="Create a passenger booking first to test this feature.";
-}else if(decision==="countered"){
-const offer=Number($("counterFare").value);
-if(!offer||offer<1){
-message="Enter a valid counter-offer.";
-}else{
-booking.fare=offer;
-booking.status="Counter-offer sent — demo only";
-$("summaryFare").textContent="R"+offer;
-$("driverFare").textContent="R"+offer;
-$("summaryStatus").textContent="Counter-offer";
-message="Counter-offer of R"+offer+" recorded in the demo. No notification was sent.";
-}
-}else if(decision==="accepted"){
-booking.status="Fare accepted — demo only";
-$("summaryStatus").textContent="Fare accepted";
-message="Fare accepted in the demo. No real trip has been dispatched.";
-}else{
-booking.status="Driver declined — demo only";
-$("summaryStatus").textContent="Declined";
-message="Request declined in the demo.";
-}
-$("driverStatus").style.display="block";
-$("driverStatus").textContent=message;
-renderTrip();
-}
+        <a class="btn call"
+           href="mailto:privatedriveexpo@gmail.com">
+           Email Us
+        </a>
 
-function shareTrip(){
-$("safetyStatus").style.display="block";
-$("safetyStatus").textContent=booking
-?booking.ref+": "+booking.pickup+" to "+booking.destination+". Fare R"+booking.fare+". "+booking.status
-:"No booking exists yet. Request a ride first.";
-}
+        <!-- Social media -->
+        <div class="social-icons">
 
-function safetyAlert(){
-$("safetyStatus").style.display="block";
-$("safetyStatus").textContent="Demo safety alert displayed. No emergency service was contacted.";
-}
-</script>
+            <a href="#" aria-label="Facebook" title="Facebook">
+                f
+            </a>
+
+            <a href="#" aria-label="Twitter" title="Twitter">
+                𝕏
+            </a>
+
+            <a href="#" aria-label="Instagram" title="Instagram">
+                ◎
+            </a>
+
+        </div>
+
+        <p style="margin-top:15px;">
+            Follow Private Drive Expo on social media.
+        </p>
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        <strong>PRIVATE DRIVE EXPO</strong>
+    </p>
+
+    <p>
+        Professional Private-Hire & Transport Services
+    </p>
+
+    <p>
+        South Africa
+    </p>
+
+    <p>
+        072 385 0359 |
+        privatedriveexpo@gmail.com
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 Private Drive Expo. All Rights Reserved.
+    </p>
+</footer>
+
 </body>
 </html>
